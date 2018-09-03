@@ -1,1 +1,3 @@
 # HeWeather-SDK
+一个仿和风天气SDK的代码，附有demo
+Pod 支持正在开发中……

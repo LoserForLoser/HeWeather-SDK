@@ -1,0 +1,18 @@
+framework调用方式
+
+请求参数： location若不传，则调用framework里原生定位获取经纬度，然后将获取到的经纬度作为location参数调用传location的接口
+
+lang参数若不传，则默认传“zh”
+
+unit参数若不传，则默认传“m”
+
+t参数为系统当前时间（秒级时间戳）由framework封装，不需要用户传
+
+sign参数获取所需参数：location,lang,unit,t,username
+
+提示：如果遇到错误
+dyld: Library not loaded: @rpath/HeWeather.framework/HeWeather
+Referenced from: /var/containers/Bundle/Application/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/xxxx.app/xxxx
+Reason: image not found
+
+则进行 Target ->Build Phases -> Link Binary With Libraries 操作找到 HEWEATHER.framework，将其默认 "Required" 状态更改为 "Optional" 即可
