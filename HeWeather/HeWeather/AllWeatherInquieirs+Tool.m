@@ -47,7 +47,12 @@
                         success:(void (^)(id _Nullable))success
                         failure:(void (^)(NSError * _Nonnull))failure {
     
-    [[AFHTTPSessionManager manager] GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    if ([URLString isEqualToString:@"https://search.heweather.com/top"]) {
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    }
+    
+    [manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
@@ -77,7 +82,9 @@
     
     NSMutableArray *dicsArray = [NSMutableArray array];
     for (NSInteger count = 0; count < (long)allKeysArray.count; count++) {
-        if (dataDictionary[allKeysArray[count]] && ![dataDictionary[allKeysArray[count]] isEqualToString:@""]) {
+        if (dataDictionary[allKeysArray[count]] && [dataDictionary[allKeysArray[count]] isKindOfClass:[NSString class]] && ![dataDictionary[allKeysArray[count]] isEqualToString:@""]) {
+            [dicsArray addObject:[NSString stringWithFormat:@"%@=%@", allKeysArray[count], dataDictionary[allKeysArray[count]]]];
+        } else if (dataDictionary[allKeysArray[count]] && [dataDictionary[allKeysArray[count]] isKindOfClass:[NSNumber class]] && (dataDictionary[allKeysArray[count]] != 0)) {
             [dicsArray addObject:[NSString stringWithFormat:@"%@=%@", allKeysArray[count], dataDictionary[allKeysArray[count]]]];
         }
     }

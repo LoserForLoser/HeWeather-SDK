@@ -177,4 +177,20 @@
 - (void)searchWithSuccess:(void(^)(id responseObject))getSuccess
          faileureForError:(void(^)(NSError *error))getError;
 
+/**
+ 城市搜索
+ find
+ */
+
+- (void)findWithSuccess:(void(^)(id responseObject))getSuccess
+       faileureForError:(void(^)(NSError *error))getError;
+
+/**
+ 热门城市列表
+ top
+ */
+
+- (void)topWithSuccess:(void(^)(id responseObject))getSuccess
+      faileureForError:(void(^)(NSError *error))getError;
+
 @end

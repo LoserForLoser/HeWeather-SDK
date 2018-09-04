@@ -10,6 +10,8 @@
 #import "AllWeatherInquieirs+Property.h"
 #import "AllWeatherInquieirs+Tool.h"
 
+NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
+
 @implementation AllWeatherInquieirs (Request)
 
 /**
@@ -594,6 +596,63 @@
     [parameter setObject:self.username forKey:@"username"];
     [parameter setObject:self.t forKey:@"t"];
     [parameter setObject:self.lang forKey:@"lang"];
+    self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
+    [parameter setObject:self.sign forKey:@"sign"];
+    
+    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
+        if (getSuccess) {
+            getSuccess(responseObject);
+        }
+    } failure:^(NSError * _Nonnull error) {
+        if (getError) {
+            getError(error);
+        }
+    }];
+}
+
+/**
+ 城市搜索
+ find
+ */
+
+- (void)findWithSuccess:(void(^)(id responseObject))getSuccess
+         faileureForError:(void(^)(NSError *error))getError {
+    NSString *urlString = [NSString stringWithFormat:@"%@find",kAppSearchAPIURL];
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    [parameter setObject:self.location forKey:@"location"];
+    [parameter setObject:self.username forKey:@"username"];
+    [parameter setObject:self.mode forKey:@"mode"];
+    [parameter setObject:self.group forKey:@"group"];
+    [parameter setObject:[NSNumber numberWithInt:self.number] forKey:@"number"];
+    [parameter setObject:self.lang forKey:@"lang"];
+    [parameter setObject:self.key forKey:@"key"];
+    self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
+    [parameter setObject:self.sign forKey:@"sign"];
+    
+    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
+        if (getSuccess) {
+            getSuccess(responseObject);
+        }
+    } failure:^(NSError * _Nonnull error) {
+        if (getError) {
+            getError(error);
+        }
+    }];
+}
+
+/**
+ 热门城市列表
+ top
+ */
+
+- (void)topWithSuccess:(void(^)(id responseObject))getSuccess
+         faileureForError:(void(^)(NSError *error))getError {
+    NSString *urlString = [NSString stringWithFormat:@"%@top",kAppSearchAPIURL];
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    [parameter setObject:self.group forKey:@"group"];
+    [parameter setObject:[NSNumber numberWithInt:self.number] forKey:@"number"];
+    [parameter setObject:self.lang forKey:@"lang"];
+    [parameter setObject:self.key forKey:@"key"];
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     

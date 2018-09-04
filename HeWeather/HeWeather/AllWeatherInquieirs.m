@@ -158,6 +158,22 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
     }
 }
 
+#pragma mark - Set Mode Type
+
+- (void)setModeType:(MODE_TYPE)modeType {
+    switch (modeType) {
+        case MODE_TYPE_EQUAL:
+            self.mode = @"equal";
+            break;
+        case MODE_TYPE_MATCH:
+            self.mode = @"match";
+            break;
+            
+        default:
+            break;
+    }
+}
+
 #pragma mark - Inquire Action
 
 - (void)weatherWithInquireType:(INQUIRE_TYPE)inquireType
@@ -181,6 +197,15 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
         }
         if (!self.unit || [self.unit isEqualToString:@""]) {
             self.unit = @"m";
+        }
+        if (!self.mode || [self.mode isEqualToString:@""]) {
+            self.mode = @"match";
+        }
+        if (!self.group || [self.group isEqualToString:@""]) {
+            self.group = @"world";
+        }
+        if (!self.number || self.number==0) {
+            self.number = 10;
         }
         self.t = [self currentTimeStr];
         
@@ -382,9 +407,9 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_AIR:{
                 [self airWithSuccess:^(id responseObject) {
-                    WeatherForecastBaseClass *weatherForecastBC = [WeatherForecastBaseClass modelObjectWithDictionary:responseObject];
+                    AirBaseClass *airForecastBC = [AirBaseClass modelObjectWithDictionary:responseObject];
                     if (getSuccess) {
-                        getSuccess(weatherForecastBC);
+                        getSuccess(airForecastBC);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -449,6 +474,32 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     SearchBaseClass *searchBC = [SearchBaseClass modelObjectWithDictionary:responseObject];
                     if (getSuccess) {
                         getSuccess(searchBC);
+                    }
+                } faileureForError:^(NSError *error) {
+                    if (getError) {
+                        getError(error);
+                    }
+                }];
+            }
+                break;
+            case INQUIRE_TYPE_FIND:{
+                [self findWithSuccess:^(id responseObject) {
+                    FindBaseClass *findBC = [FindBaseClass modelObjectWithDictionary:responseObject];
+                    if (getSuccess) {
+                        getSuccess(findBC);
+                    }
+                } faileureForError:^(NSError *error) {
+                    if (getError) {
+                        getError(error);
+                    }
+                }];
+            }
+                break;
+            case INQUIRE_TYPE_TOP:{
+                [self topWithSuccess:^(id responseObject) {
+                    TopBaseClass *topBC = [TopBaseClass modelObjectWithDictionary:responseObject];
+                    if (getSuccess) {
+                        getSuccess(topBC);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {

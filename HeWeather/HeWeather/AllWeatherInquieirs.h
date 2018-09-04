@@ -37,6 +37,8 @@ typedef NS_ENUM(NSInteger, INQUIRE_TYPE) {
     INQUIRE_TYPE_MAP_CLOUD_MAP = 19,// 卫星云图
     INQUIRE_TYPE_SOLAR_ELEVATION_ANGLR = 20,// 太阳高度
     INQUIRE_TYPE_SEARCH = 21,// 城市查询
+    INQUIRE_TYPE_FIND = 22,// 城市搜索
+    INQUIRE_TYPE_TOP = 23,// 热门城市列表
 };
 
 typedef NS_ENUM(NSInteger, LANGUAGE_TYPE) {
@@ -60,6 +62,11 @@ typedef NS_ENUM(NSInteger, LANGUAGE_TYPE) {
 typedef NS_ENUM(NSInteger, UNIT_TYPE) {
     UNIT_TYPE_M = 0,// 公制
     UNIT_TYPE_I = 1,// 英制
+};
+
+typedef NS_ENUM(NSInteger, MODE_TYPE) {
+    MODE_TYPE_EQUAL = 0,// 模糊检索
+    MODE_TYPE_MATCH = 1,// 精准检索
 };
 
 @interface AllWeatherInquieirs : NSObject
@@ -170,6 +177,37 @@ typedef NS_ENUM(NSInteger, UNIT_TYPE) {
 @property (nonatomic, copy) NSString *unit;
 
 @property (nonatomic, assign) UNIT_TYPE unitType;
+
+/**
+ 查询方式（模糊检索 or 精准检索）
+ 可选值: equal、match
+ 若不传，则默认传"match"
+ 可选
+ */
+
+@property (nonatomic, copy) NSString *mode;
+
+@property (nonatomic, assign) MODE_TYPE modeType;
+
+/**
+ 城市查询分组，默认为全球城市，可按照任意国家范围进行查询，国家名称需使用ISO 3166 所定义的国家代码
+ 特殊值：world，查询全球城市
+ 特殊值：scenic，查询中国4A和5A级景点地区
+ 特殊值：overseas，查询除中国以外的全部海外城市
+ 查询分组可最多设置20个值，多个值用英文,连接
+ 若不传，则默认传"group=world"
+ 可选
+ */
+
+@property (nonatomic, copy) NSString *group;
+
+/**
+ 搜索查询返回的数量，默认返回10个与查询城市或的确相关性最强的结果，可选1-20个，当使用IP地址或坐标查询时，仅返回一个结果
+ 若不传，则默认传"number=10"
+ 可选
+ */
+
+@property (nonatomic, assign) int number;
 
 #pragma mark - Init
 
