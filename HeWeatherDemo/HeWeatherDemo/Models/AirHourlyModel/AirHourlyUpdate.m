@@ -1,0 +1,97 @@
+//
+//  Update.m
+//
+//  Created by 朝阳 宋 on 2018/5/27
+//  Copyright (c) 2018 __MyCompanyName__. All rights reserved.
+//
+
+#import "AirHourlyUpdate.h"
+
+
+NSString *const kAirHourlyUpdateLoc = @"loc";
+NSString *const kAirHourlyUpdateUtc = @"utc";
+
+
+@interface AirHourlyUpdate ()
+
+- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
+
+@end
+
+@implementation AirHourlyUpdate
+
+@synthesize loc = _loc;
+@synthesize utc = _utc;
+
+
++ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict {
+    return [[self alloc] initWithDictionary:dict];
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict {
+    self = [super init];
+    
+    // This check serves to make sure that a non-NSDictionary object
+    // passed into the model class doesn't break the parsing.
+    if (self && [dict isKindOfClass:[NSDictionary class]]) {
+            self.loc = [self objectOrNilForKey:kAirHourlyUpdateLoc fromDictionary:dict];
+            self.utc = [self objectOrNilForKey:kAirHourlyUpdateUtc fromDictionary:dict];
+
+    }
+    
+    return self;
+    
+}
+
+- (NSDictionary *)dictionaryRepresentation {
+    NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
+    [mutableDict setValue:self.loc forKey:kAirHourlyUpdateLoc];
+    [mutableDict setValue:self.utc forKey:kAirHourlyUpdateUtc];
+
+    return [NSDictionary dictionaryWithDictionary:mutableDict];
+}
+
+- (NSString *)description  {
+    return [NSString stringWithFormat:@"%@", [self dictionaryRepresentation]];
+}
+
+#pragma mark - Helper Method
+- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict {
+    id object = [dict objectForKey:aKey];
+    return [object isEqual:[NSNull null]] ? nil : object;
+}
+
+
+#pragma mark - NSCoding Methods
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+
+    self.loc = [aDecoder decodeObjectForKey:kAirHourlyUpdateLoc];
+    self.utc = [aDecoder decodeObjectForKey:kAirHourlyUpdateUtc];
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+
+    [aCoder encodeObject:_loc forKey:kAirHourlyUpdateLoc];
+    [aCoder encodeObject:_utc forKey:kAirHourlyUpdateUtc];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    AirHourlyUpdate *copy = [[AirHourlyUpdate alloc] init];
+    
+    
+    
+    if (copy) {
+
+        copy.loc = [self.loc copyWithZone:zone];
+        copy.utc = [self.utc copyWithZone:zone];
+    }
+    
+    return copy;
+}
+
+
+@end
