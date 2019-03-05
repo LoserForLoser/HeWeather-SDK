@@ -27,4 +27,4 @@ Pod 支持正在开发中……
 
    Target ->Build Phases -> Link Binary With Libraries 找到 HEWEATHER.framework，将其默认 "Required" 状态更改为 "Optional" 即可
 
-####声明：本工程 key username 为本人开发及工程Demo所用，开发者需自行申请相关 key username ，严禁使用本Demo中的 key username 用于你自己项目，否则若被官方发现，后续使用出现各类问题需自行承担全部责任，本人概不负责！
+#### 声明：本工程 key username 为本人开发及工程 Demo 所用，开发者需自行申请相关 key username ，严禁使用本 Demo 中的 key username 用于你自己项目，否则若被官方发现，后续使用出现各类问题需自行承担全部责任，本人概不负责！
