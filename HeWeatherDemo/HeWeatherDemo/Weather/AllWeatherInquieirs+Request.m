@@ -10,6 +10,10 @@
 #import "AllWeatherInquieirs+Property.h"
 #import "AllWeatherInquieirs+Tool.h"
 
+// 付费接口
+NSString * const kAppHeweatherAPIURL = @"https://search.heweather.com/";
+
+// 城市搜索服务
 NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 @implementation AllWeatherInquieirs (Request)
@@ -159,7 +163,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)weatherGridMinuteWithSuccess:(void(^)(id responseObject))getSuccess
                     faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-minute",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-minute",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -187,7 +191,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)weatherGridNowWithSuccess:(void(^)(id responseObject))getSuccess
                  faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-now",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-now",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -215,7 +219,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)weatherGridForecastWithSuccess:(void(^)(id responseObject))getSuccess
                       faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-forecast",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-forecast",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -243,7 +247,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)weatherGridHourlyWithSuccess:(void(^)(id responseObject))getSuccess
                     faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-hourly",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-hourly",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -271,7 +275,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)alarmWithSuccess:(void(^)(id responseObject))getSuccess
         faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@alarm",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@alarm",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -299,7 +303,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)alarmAllWithSuccess:(void(^)(id responseObject))getSuccess
            faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@alarm/all",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@alarm/all",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.username forKey:@"username"];
     [parameter setObject:self.t forKey:@"t"];
@@ -324,7 +328,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)scenicWithSuccess:(void(^)(id responseObject))getSuccess
          faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@scenic",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@scenic",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -380,7 +384,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)airForecastWithSuccess:(void(^)(id responseObject))getSuccess
               faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@air/forecast",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@air/forecast",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -408,7 +412,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)airHourlyWithSuccess:(void(^)(id responseObject))getSuccess
             faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@air/hourly",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@air/hourly",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -436,7 +440,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)airWithSuccess:(void(^)(id responseObject))getSuccess
       faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@air",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@air",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -464,7 +468,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)weatherHistoricalWithSuccess:(void(^)(id responseObject))getSuccess
                     faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@weather/historical",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@weather/historical",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
     [parameter setObject:self.username forKey:@"username"];
@@ -528,7 +532,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
         }
     }
     
-    NSString *urlString = [NSString stringWithFormat:@"%@map/cloudmap",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@map/cloudmap",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.username forKey:@"username"];
     [parameter setObject:self.t forKey:@"t"];
@@ -559,7 +563,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
 
 - (void)solarElevationAngleWithSuccess:(void(^)(id responseObject))getSuccess
                       faileureForError:(void(^)(NSError *error))getError {
-    NSString *urlString = [NSString stringWithFormat:@"%@solar/solar-elevation-angle",self.kAppServerAPIURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@solar/solar-elevation-angle",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.lat forKey:@"lat"];
     [parameter setObject:self.lon forKey:@"lon"];
@@ -609,6 +613,8 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
         }
     }];
 }
+
+#pragma mark - 城市搜索服务
 
 /**
  城市搜索

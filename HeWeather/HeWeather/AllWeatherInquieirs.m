@@ -74,6 +74,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
 #pragma mark - Set User Type
 
 - (void)setUserType:(USER_TYPE)userType {
+    _userType = userType;
     switch (userType) {
         case USER_TYPE_USER:
             self.kAppServerAPIURL = kAppAPIURL;
@@ -276,94 +277,136 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
             }
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_MINUTE:{
-                [self weatherGridMinuteWithSuccess:^(id responseObject) {
-                    WeatherGridMinuteBaseClass *weatherGridMinuteBC = [WeatherGridMinuteBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(weatherGridMinuteBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self weatherGridMinuteWithSuccess:^(id responseObject) {
+                        WeatherGridMinuteBaseClass *weatherGridMinuteBC = [WeatherGridMinuteBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(weatherGridMinuteBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_NOW:{
-                [self weatherGridNowWithSuccess:^(id responseObject) {
-                    WeatherGridNowBaseClass *weatherGridNowBC = [WeatherGridNowBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(weatherGridNowBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self weatherGridNowWithSuccess:^(id responseObject) {
+                        WeatherGridNowBaseClass *weatherGridNowBC = [WeatherGridNowBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(weatherGridNowBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_FORECAST:{
-                [self weatherGridForecastWithSuccess:^(id responseObject) {
-                    WeatherGridForecastBaseClass *weatherGridForecastBC = [WeatherGridForecastBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(weatherGridForecastBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self weatherGridForecastWithSuccess:^(id responseObject) {
+                        WeatherGridForecastBaseClass *weatherGridForecastBC = [WeatherGridForecastBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(weatherGridForecastBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_HOURLY:{
-                [self weatherGridHourlyWithSuccess:^(id responseObject) {
-                    WeatherGridHourlyBaseClass *weatherGridHourlyBC = [WeatherGridHourlyBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(weatherGridHourlyBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self weatherGridHourlyWithSuccess:^(id responseObject) {
+                        WeatherGridHourlyBaseClass *weatherGridHourlyBC = [WeatherGridHourlyBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(weatherGridHourlyBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_ALARM:{
-                [self alarmWithSuccess:^(id responseObject) {
-                    AlarmBaseClass *alarmBC = [AlarmBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(alarmBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self alarmWithSuccess:^(id responseObject) {
+                        AlarmBaseClass *alarmBC = [AlarmBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(alarmBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_ALARM_ALL:{
-                [self alarmAllWithSuccess:^(id responseObject) {
-                    AlarmAllBaseClass *alarmAllBC = [AlarmAllBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(alarmAllBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self alarmAllWithSuccess:^(id responseObject) {
+                        AlarmAllBaseClass *alarmAllBC = [AlarmAllBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(alarmAllBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_SCENIC:{
-                [self scenicWithSuccess:^(id responseObject) {
-                    ScenicBaseClass *scenicBC = [ScenicBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(scenicBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self scenicWithSuccess:^(id responseObject) {
+                        ScenicBaseClass *scenicBC = [ScenicBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(scenicBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_AIR_NOW:{
@@ -380,55 +423,79 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
             }
                 break;
             case INQUIRE_TYPE_AIR_FORECAST:{
-                [self airForecastWithSuccess:^(id responseObject) {
-                    AirForecastBaseClass *airForecastBC = [AirForecastBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(airForecastBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self airForecastWithSuccess:^(id responseObject) {
+                        AirForecastBaseClass *airForecastBC = [AirForecastBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(airForecastBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_AIR_HOURLY:{
-                [self airHourlyWithSuccess:^(id responseObject) {
-                    AirHourlyBaseClass *airHourlyBC = [AirHourlyBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(airHourlyBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self airHourlyWithSuccess:^(id responseObject) {
+                        AirHourlyBaseClass *airHourlyBC = [AirHourlyBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(airHourlyBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_AIR:{
-                [self airWithSuccess:^(id responseObject) {
-                    AirBaseClass *airForecastBC = [AirBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(airForecastBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self airWithSuccess:^(id responseObject) {
+                        AirBaseClass *airForecastBC = [AirBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(airForecastBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_WEATHER_HISTORICAL:{
-                [self weatherHistoricalWithSuccess:^(id responseObject) {
-                    WeatherHistoricalBaseClass *weatherHistoricalBC = [WeatherHistoricalBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(weatherHistoricalBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self weatherHistoricalWithSuccess:^(id responseObject) {
+                        WeatherHistoricalBaseClass *weatherHistoricalBC = [WeatherHistoricalBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(weatherHistoricalBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_SOLAR_SUNRISE_SUNSET:{
@@ -445,28 +512,40 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
             }
                 break;
             case INQUIRE_TYPE_MAP_CLOUD_MAP:{
-                [self mapCloudmapWithSuccess:^(id responseObject) {
-                    if (getSuccess) {
-                        getSuccess(responseObject);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self mapCloudmapWithSuccess:^(id responseObject) {
+                        if (getSuccess) {
+                            getSuccess(responseObject);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_SOLAR_ELEVATION_ANGLR:{
-                [self solarElevationAngleWithSuccess:^(id responseObject) {
-                    SolarElevationAngleBaseClass *solarElevationAngleBC = [SolarElevationAngleBaseClass modelObjectWithDictionary:responseObject];
-                    if (getSuccess) {
-                        getSuccess(solarElevationAngleBC);
-                    }
-                } faileureForError:^(NSError *error) {
+                if (self.userType == USER_TYPE_FREE_USER) {
                     if (getError) {
-                        getError(error);
+                        getError([self prohibitRequest]);
                     }
-                }];
+                } else {
+                    [self solarElevationAngleWithSuccess:^(id responseObject) {
+                        SolarElevationAngleBaseClass *solarElevationAngleBC = [SolarElevationAngleBaseClass modelObjectWithDictionary:responseObject];
+                        if (getSuccess) {
+                            getSuccess(solarElevationAngleBC);
+                        }
+                    } faileureForError:^(NSError *error) {
+                        if (getError) {
+                            getError(error);
+                        }
+                    }];
+                }
             }
                 break;
             case INQUIRE_TYPE_SEARCH:{
@@ -511,7 +590,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 
             default: {
                 if (getError) {
-                    NSDictionary *userInfo1 = [NSDictionary dictionaryWithObjectsAndKeys:@"请选择查询类型！", nil];
+                    NSDictionary *userInfo1 = [NSDictionary dictionaryWithObject:@"请选择查询类型！" forKey:@"RequestError"];
                     NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:-999 userInfo:userInfo1];
                     getError(error);
                 }
@@ -519,6 +598,12 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
         }
     };
+}
+
+- (NSError *)prohibitRequest {
+    NSDictionary *userInfo1 = [NSDictionary dictionaryWithObject:@"此接口不对免费用户开放!" forKey:@"RequestError"];
+    NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:-999 userInfo:userInfo1];
+    return error;
 }
 
 @end
