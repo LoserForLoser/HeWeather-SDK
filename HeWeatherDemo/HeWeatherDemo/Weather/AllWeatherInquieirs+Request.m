@@ -10,8 +10,8 @@
 #import "AllWeatherInquieirs+Property.h"
 #import "AllWeatherInquieirs+Tool.h"
 
-// 付费接口
-NSString * const kAppHeweatherAPIURL = @"https://search.heweather.com/";
+// 付费接口（格点天气等接口仅付费用户可用）
+NSString * const kAppHeweatherAPIURL = @"https://api.heweather.net/";
 
 // 城市搜索服务
 NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";

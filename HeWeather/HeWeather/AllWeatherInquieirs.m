@@ -10,6 +10,8 @@
 #import "AllWeatherInquieirs+Property.h"
 #import "AllWeatherInquieirs+Request.h"
 #import "AllWeatherInquieirs+Tool.h"
+#import "WeatherNowModel.h"
+#import <MJExtension/MJExtension.h>
 
 NSString * const kAppAPIURL = @"https://api.heweather.com/s6/";
 NSString * const kAppFreeAPIURL = @"https://free-api.heweather.com/s6/";
@@ -213,9 +215,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
         switch (inquireType) {
             case INQUIRE_TYPE_WEATHER_FORECAST:{
                 [self weatherForecastWithSuccess:^(id responseObject) {
-                    WeatherForecastBaseClass *weatherForecastBC = [WeatherForecastBaseClass modelObjectWithDictionary:responseObject];
+                    WeatherForecastModel *weatherForecastModel = [WeatherForecastModel mj_objectWithKeyValues:responseObject];
+                    WeatherForecastModel *weatherForecastModelResponse = (WeatherForecastModel *)weatherForecastModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(weatherForecastBC);
+                        getSuccess(weatherForecastModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -226,9 +229,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_NOW:{
                 [self weatherNowWithSuccess:^(id responseObject) {
-                    WeatherNowBaseClass *weatherNowBC = [WeatherNowBaseClass modelObjectWithDictionary:responseObject];
+                    WeatherNowModel *weatherNowModel = [WeatherNowModel mj_objectWithKeyValues:responseObject];
+                    WeatherNowModel *weatherNowModelResponse = (WeatherNowModel *)weatherNowModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(weatherNowBC);
+                        getSuccess(weatherNowModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -239,9 +243,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_HOURLY:{
                 [self weatherHourlyWithSuccess:^(id responseObject) {
-                    WeatherHourlyBaseClass *weatherHourlyBC = [WeatherHourlyBaseClass modelObjectWithDictionary:responseObject];
+                    WeatherHourlyModel *weatherHourlyModel = [WeatherHourlyModel mj_objectWithKeyValues:responseObject];
+                    WeatherHourlyModel *weatherHourlyModelResponse = (WeatherHourlyModel *)weatherHourlyModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(weatherHourlyBC);
+                        getSuccess(weatherHourlyModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -252,9 +257,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_LIFESTYLE:{
                 [self weatherLifestyleWithSuccess:^(id responseObject) {
-                    WeatherLifestyleBaseClass *weatherLifestyletBC = [WeatherLifestyleBaseClass modelObjectWithDictionary:responseObject];
+                    WeatherLifestyleModel *weatherLifestyleModel = [WeatherLifestyleModel mj_objectWithKeyValues:responseObject];
+                    WeatherLifestyleModel *weatherLifestyleModelResponse = (WeatherLifestyleModel *)weatherLifestyleModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(weatherLifestyletBC);
+                        getSuccess(weatherLifestyleModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -265,9 +271,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER:{
                 [self weatherWithSuccess:^(id responseObject) {
-                    WeatherBaseClass *weatherBC = [WeatherBaseClass modelObjectWithDictionary:responseObject];
+                    WeatherModel *weatherModel = [WeatherModel mj_objectWithKeyValues:responseObject];
+                    WeatherModel *weatherModelResponse = (WeatherModel *)weatherModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(weatherBC);
+                        getSuccess(weatherModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -283,9 +290,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherGridMinuteWithSuccess:^(id responseObject) {
-                        WeatherGridMinuteBaseClass *weatherGridMinuteBC = [WeatherGridMinuteBaseClass modelObjectWithDictionary:responseObject];
+                        WeatherGridMinuteModel *weatherGridMinuteModel = [WeatherGridMinuteModel mj_objectWithKeyValues:responseObject];
+                        WeatherGridMinuteModel *weatherGridMinuteModelResponse = (WeatherGridMinuteModel *)weatherGridMinuteModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(weatherGridMinuteBC);
+                            getSuccess(weatherGridMinuteModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -302,9 +310,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherGridNowWithSuccess:^(id responseObject) {
-                        WeatherGridNowBaseClass *weatherGridNowBC = [WeatherGridNowBaseClass modelObjectWithDictionary:responseObject];
+                        WeatherGridNowModel *weatherGridNowModel = [WeatherGridNowModel mj_objectWithKeyValues:responseObject];
+                        WeatherGridNowModel *weatherGridNowModelResponse = (WeatherGridNowModel *)weatherGridNowModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(weatherGridNowBC);
+                            getSuccess(weatherGridNowModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -321,9 +330,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherGridForecastWithSuccess:^(id responseObject) {
-                        WeatherGridForecastBaseClass *weatherGridForecastBC = [WeatherGridForecastBaseClass modelObjectWithDictionary:responseObject];
+                        WeatherGridForecastModel *weatherGridForecastModel = [WeatherGridForecastModel mj_objectWithKeyValues:responseObject];
+                        WeatherGridForecastModel *weatherGridForecastModelResponse = (WeatherGridForecastModel *)weatherGridForecastModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(weatherGridForecastBC);
+                            getSuccess(weatherGridForecastModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -340,9 +350,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherGridHourlyWithSuccess:^(id responseObject) {
-                        WeatherGridHourlyBaseClass *weatherGridHourlyBC = [WeatherGridHourlyBaseClass modelObjectWithDictionary:responseObject];
+                        WeatherGridHourlyModel *weatherGridHourlyModel = [WeatherGridHourlyModel mj_objectWithKeyValues:responseObject];
+                        WeatherGridHourlyModel *weatherGridHourlyModelResponse = (WeatherGridHourlyModel *)weatherGridHourlyModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(weatherGridHourlyBC);
+                            getSuccess(weatherGridHourlyModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -359,9 +370,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self alarmWithSuccess:^(id responseObject) {
-                        AlarmBaseClass *alarmBC = [AlarmBaseClass modelObjectWithDictionary:responseObject];
+                        AlarmModel *alarmModel = [AlarmModel mj_objectWithKeyValues:responseObject];
+                        AlarmModel *alarmModelResponse = (AlarmModel *)alarmModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(alarmBC);
+                            getSuccess(alarmModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -378,9 +390,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self alarmAllWithSuccess:^(id responseObject) {
-                        AlarmAllBaseClass *alarmAllBC = [AlarmAllBaseClass modelObjectWithDictionary:responseObject];
+                        AlarmAllModel *alarmAllModel = [AlarmAllModel mj_objectWithKeyValues:responseObject];
+                        AlarmAllModel *alarmAllModelResponse = (AlarmAllModel *)alarmAllModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(alarmAllBC);
+                            getSuccess(alarmAllModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -397,9 +410,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self scenicWithSuccess:^(id responseObject) {
-                        ScenicBaseClass *scenicBC = [ScenicBaseClass modelObjectWithDictionary:responseObject];
+                        ScenicModel *scenicModel = [ScenicModel mj_objectWithKeyValues:responseObject];
+                        ScenicModel *scenicModelResponse = (ScenicModel *)scenicModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(scenicBC);
+                            getSuccess(scenicModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -411,9 +425,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_AIR_NOW:{
                 [self airNowWithSuccess:^(id responseObject) {
-                    AirNowBaseClass *airNowBC = [AirNowBaseClass modelObjectWithDictionary:responseObject];
+                    AirNowModel *airNowModel = [AirNowModel mj_objectWithKeyValues:responseObject];
+                    AirNowModel *airNowModelResponse = (AirNowModel *)airNowModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(airNowBC);
+                        getSuccess(airNowModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -429,9 +444,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self airForecastWithSuccess:^(id responseObject) {
-                        AirForecastBaseClass *airForecastBC = [AirForecastBaseClass modelObjectWithDictionary:responseObject];
+                        AirForecastModel *airForecastModel = [AirForecastModel mj_objectWithKeyValues:responseObject];
+                        AirForecastModel *airForecastModelResponse = (AirForecastModel *)airForecastModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(airForecastBC);
+                            getSuccess(airForecastModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -448,9 +464,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self airHourlyWithSuccess:^(id responseObject) {
-                        AirHourlyBaseClass *airHourlyBC = [AirHourlyBaseClass modelObjectWithDictionary:responseObject];
+                        AirHourlyModel *airHourlyModel = [AirHourlyModel mj_objectWithKeyValues:responseObject];
+                        AirHourlyModel *airHourlyModelResponse = (AirHourlyModel *)airHourlyModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(airHourlyBC);
+                            getSuccess(airHourlyModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -467,9 +484,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self airWithSuccess:^(id responseObject) {
-                        AirBaseClass *airForecastBC = [AirBaseClass modelObjectWithDictionary:responseObject];
+                        AirModel *airModel = [AirModel mj_objectWithKeyValues:responseObject];
+                        AirModel *airModelResponse = (AirModel *)airModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(airForecastBC);
+                            getSuccess(airModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -486,9 +504,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherHistoricalWithSuccess:^(id responseObject) {
-                        WeatherHistoricalBaseClass *weatherHistoricalBC = [WeatherHistoricalBaseClass modelObjectWithDictionary:responseObject];
+                        WeatherHistoricalModel *weatherHistoricalModel = [WeatherHistoricalModel mj_objectWithKeyValues:responseObject];
+                        WeatherHistoricalModel *weatherHistoricalModelResponse = (WeatherHistoricalModel *)weatherHistoricalModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(weatherHistoricalBC);
+                            getSuccess(weatherHistoricalModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -500,9 +519,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_SOLAR_SUNRISE_SUNSET:{
                 [self solarSunriseSunsetWithSuccess:^(id responseObject) {
-                    SolarSunriseSunsetBaseClass *solarSunriseSunsetBC = [SolarSunriseSunsetBaseClass modelObjectWithDictionary:responseObject];
+                    SolarSunriseSunsetModel *solarSunriseSunsetModel = [SolarSunriseSunsetModel mj_objectWithKeyValues:responseObject];
+                    SolarSunriseSunsetModel *solarSunriseSunsetModelResponse = (SolarSunriseSunsetModel *)solarSunriseSunsetModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(solarSunriseSunsetBC);
+                        getSuccess(solarSunriseSunsetModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -536,9 +556,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self solarElevationAngleWithSuccess:^(id responseObject) {
-                        SolarElevationAngleBaseClass *solarElevationAngleBC = [SolarElevationAngleBaseClass modelObjectWithDictionary:responseObject];
+                        SolarElevationAngleModel *solarElevationAngleModel = [SolarElevationAngleModel mj_objectWithKeyValues:responseObject];
+                        SolarElevationAngleModel *solarElevationAngleModelResponse = (SolarElevationAngleModel *)solarElevationAngleModel.HeWeather6.firstObject;
                         if (getSuccess) {
-                            getSuccess(solarElevationAngleBC);
+                            getSuccess(solarElevationAngleModelResponse);
                         }
                     } faileureForError:^(NSError *error) {
                         if (getError) {
@@ -550,9 +571,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_SEARCH:{
                 [self searchWithSuccess:^(id responseObject) {
-                    SearchBaseClass *searchBC = [SearchBaseClass modelObjectWithDictionary:responseObject];
+                    SearchModel *searchModel = [SearchModel mj_objectWithKeyValues:responseObject];
+                    SearchModel *searchModelResponse = (SearchModel *)searchModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(searchBC);
+                        getSuccess(searchModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -563,9 +585,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_FIND:{
                 [self findWithSuccess:^(id responseObject) {
-                    FindBaseClass *findBC = [FindBaseClass modelObjectWithDictionary:responseObject];
+                    FindModel *findModel = [FindModel mj_objectWithKeyValues:responseObject];
+                    FindModel *findModelResponse = (FindModel *)findModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(findBC);
+                        getSuccess(findModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {
@@ -576,9 +599,10 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_TOP:{
                 [self topWithSuccess:^(id responseObject) {
-                    TopBaseClass *topBC = [TopBaseClass modelObjectWithDictionary:responseObject];
+                    TopModel *topModel = [TopModel mj_objectWithKeyValues:responseObject];
+                    TopModel *topModelResponse = (TopModel *)topModel.HeWeather6.firstObject;
                     if (getSuccess) {
-                        getSuccess(topBC);
+                        getSuccess(topModelResponse);
                     }
                 } faileureForError:^(NSError *error) {
                     if (getError) {

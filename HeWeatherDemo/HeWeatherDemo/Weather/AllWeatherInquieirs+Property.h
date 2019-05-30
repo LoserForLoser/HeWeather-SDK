@@ -7,37 +7,16 @@
 //
 
 #import "AllWeatherInquieirs.h"
-#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <UIKit/UIKit.h>
 
-#import "AirForecastDataModels.h"
-#import "AirHourlyDataModels.h"
-#import "AirDataModels.h"
-#import "AirNowDataModels.h"
-#import "AlarmAllDataModels.h"
-#import "AlarmDataModels.h"
-#import "FindDataModels.h"
-#import "ScenicDataModels.h"
-#import "SearchDataModels.h"
-#import "SolarElevationAngleDataModels.h"
-#import "SolarSunriseSunsetDataModels.h"
-#import "TopDataModels.h"
-#import "WeatherForecastDataModels.h"
-#import "WeatherGridForecastDataModels.h"
-#import "WeatherGridHourlyDataModels.h"
-#import "WeatherGridMinuteDataModels.h"
-#import "WeatherGridNowDataModels.h"
-#import "WeatherHistoricalDataModels.h"
-#import "WeatherHourlyDataModels.h"
-#import "WeatherLifestyleDataModels.h"
-#import "WeatherDataModels.h"
-#import "WeatherNowDataModels.h"
+#import "DataBaseClasses.h"
 
 @interface AllWeatherInquieirs () <CLLocationManagerDelegate>
 
 @property (nonatomic, copy) void(^locationBlock)(void);
 
 @property (nonatomic, strong) CLLocationManager *locationManager;// 定位服务
-@property (nonatomic, copy) NSString *currentCity;// 城市
 @property (nonatomic, copy) NSString *strLatitude;// 经度
 @property (nonatomic, copy) NSString *strLongitude;// 维度
 

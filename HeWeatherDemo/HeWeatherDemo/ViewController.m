@@ -27,7 +27,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     allWeather = [AllWeatherInquieirs sharedInstance];
-    allWeather.userType = USER_TYPE_USER;
+    allWeather.userType = USER_TYPE_FREE_USER;
     allWeather.location = @"beijing";
     allWeather.date = @"20180526";
     allWeather.time = @"1200";
@@ -71,93 +71,93 @@
         
         switch (inquireType) {
             case INQUIRE_TYPE_WEATHER_FORECAST:{
-                WeatherForecastBaseClass *weatherForecastBC = responseObject;
-                NSLog(@"%@", weatherForecastBC);
+                WeatherForecastModel *weatherForecastModel = responseObject;
+                NSLog(@"%@", weatherForecastModel);
             }
                 break;
             case INQUIRE_TYPE_WEATHER_NOW:{
-                WeatherNowBaseClass *weatherNowBC = responseObject;
-                NSLog(@"%@", weatherNowBC);
+                WeatherNowModel *weatherNowModel = responseObject;
+                NSLog(@"%@", weatherNowModel);
             }
                 break;
             case INQUIRE_TYPE_WEATHER_HOURLY:{
-                WeatherHourlyBaseClass *weatherHourlyBC = responseObject;
-                NSLog(@"%@", weatherHourlyBC);
+                WeatherHourlyModel *weatherHourlyModel = responseObject;
+                NSLog(@"%@", weatherHourlyModel);
             }
                 break;
             case INQUIRE_TYPE_WEATHER_LIFESTYLE:{
-                WeatherLifestyleBaseClass *weatherLifestyletBC = responseObject;
-                NSLog(@"%@", weatherLifestyletBC);
+                WeatherLifestyleModel *weatherLifestyleModel = responseObject;
+                NSLog(@"%@", weatherLifestyleModel);
             }
                 break;
             case INQUIRE_TYPE_WEATHER:{
-                WeatherBaseClass *weatherBC = responseObject;
-                NSLog(@"%@", weatherBC);
+                WeatherModel *weatherModel = responseObject;
+                NSLog(@"%@", weatherModel);
             }
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_MINUTE:{
-                WeatherGridMinuteBaseClass *weatherGridMinuteBC = responseObject;
-                NSLog(@"%@", weatherGridMinuteBC);
+                WeatherGridMinuteModel *weatherGridMinuteModel = responseObject;
+                NSLog(@"%@", weatherGridMinuteModel);
             }
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_NOW:{
-                WeatherGridNowBaseClass *weatherGridNowBC = responseObject;
-                NSLog(@"%@", weatherGridNowBC);
+                WeatherGridNowModel *weatherGridNowModel = responseObject;
+                NSLog(@"%@", weatherGridNowModel);
             }
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_FORECAST:{
-                WeatherGridForecastBaseClass *weatherGridForecastBC = responseObject;
-                NSLog(@"%@", weatherGridForecastBC);
+                WeatherGridForecastModel *weatherGridForecastModel = responseObject;
+                NSLog(@"%@", weatherGridForecastModel);
             }
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_HOURLY:{
-                WeatherGridHourlyBaseClass *weatherGridHourlyBC = responseObject;
-                NSLog(@"%@", weatherGridHourlyBC);
+                WeatherGridHourlyModel *weatherGridHourlyModel = responseObject;
+                NSLog(@"%@", weatherGridHourlyModel);
             }
                 break;
             case INQUIRE_TYPE_ALARM:{
-                AlarmBaseClass *alarmBC = responseObject;
-                NSLog(@"%@", alarmBC);
+                AlarmModel *alarmModel = responseObject;
+                NSLog(@"%@", alarmModel);
             }
                 break;
             case INQUIRE_TYPE_ALARM_ALL:{
-                AlarmAllBaseClass *alarmAllBC = responseObject;
-                NSLog(@"%@", alarmAllBC);
+                AlarmAllModel *alarmAllModel = responseObject;
+                NSLog(@"%@", alarmAllModel);
             }
                 break;
             case INQUIRE_TYPE_SCENIC:{
-                ScenicBaseClass *scenicBC = responseObject;
-                NSLog(@"%@", scenicBC);
+                ScenicModel *scenicModel = responseObject;
+                NSLog(@"%@", scenicModel);
             }
                 break;
             case INQUIRE_TYPE_AIR_NOW:{
-                AirNowBaseClass *airNowBC = responseObject;
-                NSLog(@"%@", airNowBC);
+                AirNowModel *airNowModel = responseObject;
+                NSLog(@"%@", airNowModel);
             }
                 break;
             case INQUIRE_TYPE_AIR_FORECAST:{
-                AirForecastBaseClass *airForecastBC = responseObject;
-                NSLog(@"%@", airForecastBC);
+                AirForecastModel *airForecastModel = responseObject;
+                NSLog(@"%@", airForecastModel);
             }
                 break;
             case INQUIRE_TYPE_AIR_HOURLY:{
-                AirHourlyBaseClass *airHourlyBC = responseObject;
-                NSLog(@"%@", airHourlyBC);
+                AirHourlyModel *airHourlyModel = responseObject;
+                NSLog(@"%@", airHourlyModel);
             }
                 break;
             case INQUIRE_TYPE_AIR:{
-                AirBaseClass *airForecastBC = responseObject;
-                NSLog(@"%@", airForecastBC);
+                AirModel *airModel = responseObject;
+                NSLog(@"%@", airModel);
             }
                 break;
             case INQUIRE_TYPE_WEATHER_HISTORICAL:{
-                WeatherHistoricalBaseClass *weatherHistoricalBC = responseObject;
-                NSLog(@"%@", weatherHistoricalBC);
+                WeatherHistoricalModel *weatherHistoricalModel = responseObject;
+                NSLog(@"%@", weatherHistoricalModel);
             }
                 break;
             case INQUIRE_TYPE_SOLAR_SUNRISE_SUNSET:{
-                SolarSunriseSunsetBaseClass *solarSunriseSunsetBC = responseObject;
-                NSLog(@"%@", solarSunriseSunsetBC);
+                SolarSunriseSunsetModel *solarSunriseSunsetModel = responseObject;
+                NSLog(@"%@", solarSunriseSunsetModel);
             }
                 break;
             case INQUIRE_TYPE_MAP_CLOUD_MAP:{
@@ -165,23 +165,23 @@
             }
                 break;
             case INQUIRE_TYPE_SOLAR_ELEVATION_ANGLR:{
-                SolarElevationAngleBaseClass *solarElevationAngleBC = responseObject;
-                NSLog(@"%@", solarElevationAngleBC);
+                SolarElevationAngleModel *solarElevationAngleModel = responseObject;
+                NSLog(@"%@", solarElevationAngleModel);
             }
                 break;
             case INQUIRE_TYPE_SEARCH:{
-                SearchBaseClass *searchBC = responseObject;
-                NSLog(@"%@", searchBC);
+                SearchModel *searchModel = responseObject;
+                NSLog(@"%@", searchModel);
             }
                 break;
             case INQUIRE_TYPE_FIND:{
-                FindBaseClass *findBC = responseObject;
-                NSLog(@"%@", findBC);
+                FindModel *findModel = responseObject;
+                NSLog(@"%@", findModel);
             }
                 break;
             case INQUIRE_TYPE_TOP:{
-                TopBaseClass *topBC = responseObject;
-                NSLog(@"%@", topBC);
+                TopModel *topModel = responseObject;
+                NSLog(@"%@", topModel);
             }
                 break;
                 

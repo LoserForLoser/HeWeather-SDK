@@ -20,7 +20,6 @@
         self.locationManager = [[CLLocationManager alloc]init];
         self.locationManager.delegate = self;
         [self.locationManager requestAlwaysAuthorization];
-        self.currentCity = [[NSString alloc]init];
         [self.locationManager requestWhenInUseAuthorization];
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         self.locationManager.distanceFilter = 5.0;
