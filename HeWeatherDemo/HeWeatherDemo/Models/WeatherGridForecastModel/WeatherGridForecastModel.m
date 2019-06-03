@@ -11,7 +11,3 @@
 @implementation WeatherGridForecastModel
 
 @end
-
-@implementation GridForecast
-
-@end

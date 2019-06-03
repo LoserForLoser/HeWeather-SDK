@@ -11,7 +11,3 @@
 @implementation WeatherHourlyModel
 
 @end
-
-@implementation Hourly
-
-@end

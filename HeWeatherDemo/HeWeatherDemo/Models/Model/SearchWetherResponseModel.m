@@ -11,7 +11,3 @@
 @implementation SearchWetherResponseModel
 
 @end
-
-@implementation SearchCity
-
-@end

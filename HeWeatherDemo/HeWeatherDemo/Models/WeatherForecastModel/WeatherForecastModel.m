@@ -11,7 +11,3 @@
 @implementation WeatherForecastModel
 
 @end
-
-@implementation DailyForecast
-
-@end

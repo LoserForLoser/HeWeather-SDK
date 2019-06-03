@@ -7,54 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2485569C229FCE970059F07D /* ScenicModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855656229FCE970059F07D /* ScenicModel.h */; };
-		2485569D229FCE970059F07D /* ScenicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855657229FCE970059F07D /* ScenicModel.m */; };
-		2485569E229FCE970059F07D /* AirNowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855659229FCE970059F07D /* AirNowModel.m */; };
-		2485569F229FCE970059F07D /* AirNowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485565A229FCE970059F07D /* AirNowModel.h */; };
-		248556A0229FCE970059F07D /* SolarSunriseSunsetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485565C229FCE970059F07D /* SolarSunriseSunsetModel.h */; };
-		248556A1229FCE970059F07D /* SolarSunriseSunsetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485565D229FCE970059F07D /* SolarSunriseSunsetModel.m */; };
-		248556A2229FCE970059F07D /* WetherResponseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485565E229FCE970059F07D /* WetherResponseModel.h */; };
-		248556A3229FCE970059F07D /* FindModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855660229FCE970059F07D /* FindModel.h */; };
-		248556A4229FCE970059F07D /* FindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855661229FCE970059F07D /* FindModel.m */; };
-		248556A5229FCE970059F07D /* AlarmModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855663229FCE970059F07D /* AlarmModel.h */; };
-		248556A6229FCE970059F07D /* AlarmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855664229FCE970059F07D /* AlarmModel.m */; };
-		248556A7229FCE970059F07D /* WeatherHistoricalModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855666229FCE970059F07D /* WeatherHistoricalModel.h */; };
-		248556A8229FCE970059F07D /* WeatherHistoricalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855667229FCE970059F07D /* WeatherHistoricalModel.m */; };
-		248556A9229FCE970059F07D /* SearchWetherResponseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855668229FCE970059F07D /* SearchWetherResponseModel.h */; };
-		248556AA229FCE970059F07D /* WeatherGridMinuteModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485566A229FCE970059F07D /* WeatherGridMinuteModel.h */; };
-		248556AB229FCE970059F07D /* WeatherGridMinuteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485566B229FCE970059F07D /* WeatherGridMinuteModel.m */; };
-		248556AC229FCE970059F07D /* WeatherNowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485566D229FCE970059F07D /* WeatherNowModel.h */; };
-		248556AD229FCE970059F07D /* WeatherNowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485566E229FCE970059F07D /* WeatherNowModel.m */; };
-		248556AE229FCE970059F07D /* SearchModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855670229FCE970059F07D /* SearchModel.h */; };
-		248556AF229FCE970059F07D /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855671229FCE970059F07D /* SearchModel.m */; };
-		248556B0229FCE970059F07D /* WeatherGridHourlyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855673229FCE970059F07D /* WeatherGridHourlyModel.m */; };
-		248556B1229FCE970059F07D /* WeatherGridHourlyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855674229FCE970059F07D /* WeatherGridHourlyModel.h */; };
-		248556B2229FCE970059F07D /* AirForecastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855676229FCE970059F07D /* AirForecastModel.m */; };
-		248556B3229FCE970059F07D /* AirForecastModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855677229FCE970059F07D /* AirForecastModel.h */; };
-		248556B4229FCE970059F07D /* WetherResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855678229FCE970059F07D /* WetherResponseModel.m */; };
-		248556B5229FCE970059F07D /* WeatherGridForecastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485567A229FCE970059F07D /* WeatherGridForecastModel.m */; };
-		248556B6229FCE970059F07D /* WeatherGridForecastModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485567B229FCE970059F07D /* WeatherGridForecastModel.h */; };
-		248556B7229FCE970059F07D /* AlarmAllModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485567D229FCE970059F07D /* AlarmAllModel.h */; };
-		248556B8229FCE970059F07D /* AlarmAllModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485567E229FCE970059F07D /* AlarmAllModel.m */; };
-		248556B9229FCE970059F07D /* AirModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855680229FCE970059F07D /* AirModel.m */; };
-		248556BA229FCE970059F07D /* AirModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855681229FCE970059F07D /* AirModel.h */; };
-		248556BB229FCE970059F07D /* WeatherGridNowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855683229FCE970059F07D /* WeatherGridNowModel.h */; };
-		248556BC229FCE970059F07D /* WeatherGridNowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855684229FCE970059F07D /* WeatherGridNowModel.m */; };
-		248556BD229FCE970059F07D /* TopModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855687229FCE970059F07D /* TopModel.h */; };
-		248556BE229FCE970059F07D /* TopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855688229FCE970059F07D /* TopModel.m */; };
-		248556BF229FCE970059F07D /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485568A229FCE970059F07D /* WeatherModel.m */; };
-		248556C0229FCE970059F07D /* WeatherModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485568B229FCE970059F07D /* WeatherModel.h */; };
-		248556C1229FCE970059F07D /* WeatherLifestyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485568D229FCE970059F07D /* WeatherLifestyleModel.m */; };
-		248556C2229FCE970059F07D /* WeatherLifestyleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485568E229FCE970059F07D /* WeatherLifestyleModel.h */; };
-		248556C3229FCE970059F07D /* SearchWetherResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485568F229FCE970059F07D /* SearchWetherResponseModel.m */; };
-		248556C4229FCE970059F07D /* AirHourlyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855691229FCE970059F07D /* AirHourlyModel.m */; };
-		248556C5229FCE970059F07D /* AirHourlyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855692229FCE970059F07D /* AirHourlyModel.h */; };
-		248556C6229FCE970059F07D /* SolarElevationAngleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855694229FCE970059F07D /* SolarElevationAngleModel.m */; };
-		248556C7229FCE970059F07D /* SolarElevationAngleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855695229FCE970059F07D /* SolarElevationAngleModel.h */; };
-		248556C8229FCE970059F07D /* WeatherForecastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24855697229FCE970059F07D /* WeatherForecastModel.m */; };
-		248556C9229FCE970059F07D /* WeatherForecastModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24855698229FCE970059F07D /* WeatherForecastModel.h */; };
-		248556CA229FCE970059F07D /* WeatherHourlyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485569A229FCE970059F07D /* WeatherHourlyModel.m */; };
-		248556CB229FCE970059F07D /* WeatherHourlyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485569B229FCE970059F07D /* WeatherHourlyModel.h */; };
+		2485571C22A4B9980059F07D /* ScenicModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556D522A4B9980059F07D /* ScenicModel.h */; };
+		2485571D22A4B9980059F07D /* ScenicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556D622A4B9980059F07D /* ScenicModel.m */; };
+		2485571E22A4B9980059F07D /* AirNowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556D822A4B9980059F07D /* AirNowModel.m */; };
+		2485571F22A4B9980059F07D /* AirNowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556D922A4B9980059F07D /* AirNowModel.h */; };
+		2485572022A4B9980059F07D /* SolarSunriseSunsetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556DB22A4B9980059F07D /* SolarSunriseSunsetModel.h */; };
+		2485572122A4B9980059F07D /* SolarSunriseSunsetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556DC22A4B9980059F07D /* SolarSunriseSunsetModel.m */; };
+		2485572222A4B9980059F07D /* FindModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556DE22A4B9980059F07D /* FindModel.h */; };
+		2485572322A4B9980059F07D /* FindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556DF22A4B9980059F07D /* FindModel.m */; };
+		2485572422A4B9980059F07D /* AlarmModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556E122A4B9980059F07D /* AlarmModel.h */; };
+		2485572522A4B9980059F07D /* AlarmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556E222A4B9980059F07D /* AlarmModel.m */; };
+		2485572622A4B9980059F07D /* WeatherHistoricalModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556E422A4B9980059F07D /* WeatherHistoricalModel.h */; };
+		2485572722A4B9980059F07D /* WeatherHistoricalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556E522A4B9980059F07D /* WeatherHistoricalModel.m */; };
+		2485572822A4B9980059F07D /* WeatherGridMinuteModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556E722A4B9980059F07D /* WeatherGridMinuteModel.h */; };
+		2485572922A4B9980059F07D /* WeatherGridMinuteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556E822A4B9980059F07D /* WeatherGridMinuteModel.m */; };
+		2485572A22A4B9980059F07D /* WeatherNowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556EA22A4B9980059F07D /* WeatherNowModel.h */; };
+		2485572B22A4B9980059F07D /* WeatherNowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556EB22A4B9980059F07D /* WeatherNowModel.m */; };
+		2485572C22A4B9980059F07D /* SearchModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556ED22A4B9980059F07D /* SearchModel.h */; };
+		2485572D22A4B9980059F07D /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556EE22A4B9980059F07D /* SearchModel.m */; };
+		2485572E22A4B9980059F07D /* WeatherGridHourlyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556F022A4B9980059F07D /* WeatherGridHourlyModel.m */; };
+		2485572F22A4B9980059F07D /* WeatherGridHourlyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556F122A4B9980059F07D /* WeatherGridHourlyModel.h */; };
+		2485573022A4B9980059F07D /* AirForecastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556F322A4B9980059F07D /* AirForecastModel.m */; };
+		2485573122A4B9980059F07D /* AirForecastModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556F422A4B9980059F07D /* AirForecastModel.h */; };
+		2485573222A4B9980059F07D /* WeatherGridForecastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556F622A4B9980059F07D /* WeatherGridForecastModel.m */; };
+		2485573322A4B9980059F07D /* WeatherGridForecastModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556F722A4B9980059F07D /* WeatherGridForecastModel.h */; };
+		2485573422A4B9980059F07D /* AlarmAllModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556F922A4B9980059F07D /* AlarmAllModel.h */; };
+		2485573522A4B9980059F07D /* AlarmAllModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556FA22A4B9980059F07D /* AlarmAllModel.m */; };
+		2485573622A4B9980059F07D /* WetherResponseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556FC22A4B9980059F07D /* WetherResponseModel.h */; };
+		2485573722A4B9980059F07D /* SearchWetherResponseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 248556FD22A4B9980059F07D /* SearchWetherResponseModel.h */; };
+		2485573822A4B9980059F07D /* WetherResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556FE22A4B9980059F07D /* WetherResponseModel.m */; };
+		2485573922A4B9980059F07D /* SearchWetherResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248556FF22A4B9980059F07D /* SearchWetherResponseModel.m */; };
+		2485573A22A4B9980059F07D /* AirModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485570122A4B9980059F07D /* AirModel.m */; };
+		2485573B22A4B9980059F07D /* AirModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485570222A4B9980059F07D /* AirModel.h */; };
+		2485573C22A4B9980059F07D /* WeatherGridNowModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485570422A4B9980059F07D /* WeatherGridNowModel.h */; };
+		2485573D22A4B9980059F07D /* WeatherGridNowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485570522A4B9980059F07D /* WeatherGridNowModel.m */; };
+		2485573E22A4B9980059F07D /* TopModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485570822A4B9980059F07D /* TopModel.h */; };
+		2485573F22A4B9980059F07D /* TopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485570922A4B9980059F07D /* TopModel.m */; };
+		2485574022A4B9980059F07D /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485570B22A4B9980059F07D /* WeatherModel.m */; };
+		2485574122A4B9980059F07D /* WeatherModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485570C22A4B9980059F07D /* WeatherModel.h */; };
+		2485574222A4B9980059F07D /* WeatherLifestyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485570E22A4B9980059F07D /* WeatherLifestyleModel.m */; };
+		2485574322A4B9980059F07D /* WeatherLifestyleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485570F22A4B9980059F07D /* WeatherLifestyleModel.h */; };
+		2485574422A4B9980059F07D /* AirHourlyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485571122A4B9980059F07D /* AirHourlyModel.m */; };
+		2485574522A4B9980059F07D /* AirHourlyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485571222A4B9980059F07D /* AirHourlyModel.h */; };
+		2485574622A4B9980059F07D /* SolarElevationAngleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485571422A4B9980059F07D /* SolarElevationAngleModel.m */; };
+		2485574722A4B9980059F07D /* SolarElevationAngleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485571522A4B9980059F07D /* SolarElevationAngleModel.h */; };
+		2485574822A4B9980059F07D /* WeatherForecastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485571722A4B9980059F07D /* WeatherForecastModel.m */; };
+		2485574922A4B9980059F07D /* WeatherForecastModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485571822A4B9980059F07D /* WeatherForecastModel.h */; };
+		2485574A22A4B9980059F07D /* WeatherHourlyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485571A22A4B9980059F07D /* WeatherHourlyModel.m */; };
+		2485574B22A4B9980059F07D /* WeatherHourlyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2485571B22A4B9980059F07D /* WeatherHourlyModel.h */; };
 		70E277864A9F5560A6EBE06F /* libPods-HeWeather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9FF1B0CE9EBC24CCCBF829 /* libPods-HeWeather.a */; };
 		8374325E20D9139D0016D88E /* DataBaseClasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 8374325D20D912C20016D88E /* DataBaseClasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83C86E6E20BBB51F003DAD9D /* HeWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C86E6420BBB51F003DAD9D /* HeWeather.framework */; };
@@ -80,54 +80,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24855656229FCE970059F07D /* ScenicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicModel.h; sourceTree = "<group>"; };
-		24855657229FCE970059F07D /* ScenicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicModel.m; sourceTree = "<group>"; };
-		24855659229FCE970059F07D /* AirNowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirNowModel.m; sourceTree = "<group>"; };
-		2485565A229FCE970059F07D /* AirNowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirNowModel.h; sourceTree = "<group>"; };
-		2485565C229FCE970059F07D /* SolarSunriseSunsetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolarSunriseSunsetModel.h; sourceTree = "<group>"; };
-		2485565D229FCE970059F07D /* SolarSunriseSunsetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolarSunriseSunsetModel.m; sourceTree = "<group>"; };
-		2485565E229FCE970059F07D /* WetherResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WetherResponseModel.h; sourceTree = "<group>"; };
-		24855660229FCE970059F07D /* FindModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindModel.h; sourceTree = "<group>"; };
-		24855661229FCE970059F07D /* FindModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindModel.m; sourceTree = "<group>"; };
-		24855663229FCE970059F07D /* AlarmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmModel.h; sourceTree = "<group>"; };
-		24855664229FCE970059F07D /* AlarmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmModel.m; sourceTree = "<group>"; };
-		24855666229FCE970059F07D /* WeatherHistoricalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherHistoricalModel.h; sourceTree = "<group>"; };
-		24855667229FCE970059F07D /* WeatherHistoricalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherHistoricalModel.m; sourceTree = "<group>"; };
-		24855668229FCE970059F07D /* SearchWetherResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchWetherResponseModel.h; sourceTree = "<group>"; };
-		2485566A229FCE970059F07D /* WeatherGridMinuteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherGridMinuteModel.h; sourceTree = "<group>"; };
-		2485566B229FCE970059F07D /* WeatherGridMinuteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherGridMinuteModel.m; sourceTree = "<group>"; };
-		2485566D229FCE970059F07D /* WeatherNowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherNowModel.h; sourceTree = "<group>"; };
-		2485566E229FCE970059F07D /* WeatherNowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherNowModel.m; sourceTree = "<group>"; };
-		24855670229FCE970059F07D /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
-		24855671229FCE970059F07D /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
-		24855673229FCE970059F07D /* WeatherGridHourlyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherGridHourlyModel.m; sourceTree = "<group>"; };
-		24855674229FCE970059F07D /* WeatherGridHourlyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherGridHourlyModel.h; sourceTree = "<group>"; };
-		24855676229FCE970059F07D /* AirForecastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirForecastModel.m; sourceTree = "<group>"; };
-		24855677229FCE970059F07D /* AirForecastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirForecastModel.h; sourceTree = "<group>"; };
-		24855678229FCE970059F07D /* WetherResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WetherResponseModel.m; sourceTree = "<group>"; };
-		2485567A229FCE970059F07D /* WeatherGridForecastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherGridForecastModel.m; sourceTree = "<group>"; };
-		2485567B229FCE970059F07D /* WeatherGridForecastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherGridForecastModel.h; sourceTree = "<group>"; };
-		2485567D229FCE970059F07D /* AlarmAllModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmAllModel.h; sourceTree = "<group>"; };
-		2485567E229FCE970059F07D /* AlarmAllModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmAllModel.m; sourceTree = "<group>"; };
-		24855680229FCE970059F07D /* AirModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirModel.m; sourceTree = "<group>"; };
-		24855681229FCE970059F07D /* AirModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirModel.h; sourceTree = "<group>"; };
-		24855683229FCE970059F07D /* WeatherGridNowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherGridNowModel.h; sourceTree = "<group>"; };
-		24855684229FCE970059F07D /* WeatherGridNowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherGridNowModel.m; sourceTree = "<group>"; };
-		24855687229FCE970059F07D /* TopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopModel.h; sourceTree = "<group>"; };
-		24855688229FCE970059F07D /* TopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopModel.m; sourceTree = "<group>"; };
-		2485568A229FCE970059F07D /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
-		2485568B229FCE970059F07D /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
-		2485568D229FCE970059F07D /* WeatherLifestyleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherLifestyleModel.m; sourceTree = "<group>"; };
-		2485568E229FCE970059F07D /* WeatherLifestyleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherLifestyleModel.h; sourceTree = "<group>"; };
-		2485568F229FCE970059F07D /* SearchWetherResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchWetherResponseModel.m; sourceTree = "<group>"; };
-		24855691229FCE970059F07D /* AirHourlyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirHourlyModel.m; sourceTree = "<group>"; };
-		24855692229FCE970059F07D /* AirHourlyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirHourlyModel.h; sourceTree = "<group>"; };
-		24855694229FCE970059F07D /* SolarElevationAngleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolarElevationAngleModel.m; sourceTree = "<group>"; };
-		24855695229FCE970059F07D /* SolarElevationAngleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolarElevationAngleModel.h; sourceTree = "<group>"; };
-		24855697229FCE970059F07D /* WeatherForecastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherForecastModel.m; sourceTree = "<group>"; };
-		24855698229FCE970059F07D /* WeatherForecastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastModel.h; sourceTree = "<group>"; };
-		2485569A229FCE970059F07D /* WeatherHourlyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherHourlyModel.m; sourceTree = "<group>"; };
-		2485569B229FCE970059F07D /* WeatherHourlyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherHourlyModel.h; sourceTree = "<group>"; };
+		248556D522A4B9980059F07D /* ScenicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenicModel.h; sourceTree = "<group>"; };
+		248556D622A4B9980059F07D /* ScenicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenicModel.m; sourceTree = "<group>"; };
+		248556D822A4B9980059F07D /* AirNowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirNowModel.m; sourceTree = "<group>"; };
+		248556D922A4B9980059F07D /* AirNowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirNowModel.h; sourceTree = "<group>"; };
+		248556DB22A4B9980059F07D /* SolarSunriseSunsetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolarSunriseSunsetModel.h; sourceTree = "<group>"; };
+		248556DC22A4B9980059F07D /* SolarSunriseSunsetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolarSunriseSunsetModel.m; sourceTree = "<group>"; };
+		248556DE22A4B9980059F07D /* FindModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindModel.h; sourceTree = "<group>"; };
+		248556DF22A4B9980059F07D /* FindModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindModel.m; sourceTree = "<group>"; };
+		248556E122A4B9980059F07D /* AlarmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmModel.h; sourceTree = "<group>"; };
+		248556E222A4B9980059F07D /* AlarmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmModel.m; sourceTree = "<group>"; };
+		248556E422A4B9980059F07D /* WeatherHistoricalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherHistoricalModel.h; sourceTree = "<group>"; };
+		248556E522A4B9980059F07D /* WeatherHistoricalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherHistoricalModel.m; sourceTree = "<group>"; };
+		248556E722A4B9980059F07D /* WeatherGridMinuteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherGridMinuteModel.h; sourceTree = "<group>"; };
+		248556E822A4B9980059F07D /* WeatherGridMinuteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherGridMinuteModel.m; sourceTree = "<group>"; };
+		248556EA22A4B9980059F07D /* WeatherNowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherNowModel.h; sourceTree = "<group>"; };
+		248556EB22A4B9980059F07D /* WeatherNowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherNowModel.m; sourceTree = "<group>"; };
+		248556ED22A4B9980059F07D /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		248556EE22A4B9980059F07D /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		248556F022A4B9980059F07D /* WeatherGridHourlyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherGridHourlyModel.m; sourceTree = "<group>"; };
+		248556F122A4B9980059F07D /* WeatherGridHourlyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherGridHourlyModel.h; sourceTree = "<group>"; };
+		248556F322A4B9980059F07D /* AirForecastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirForecastModel.m; sourceTree = "<group>"; };
+		248556F422A4B9980059F07D /* AirForecastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirForecastModel.h; sourceTree = "<group>"; };
+		248556F622A4B9980059F07D /* WeatherGridForecastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherGridForecastModel.m; sourceTree = "<group>"; };
+		248556F722A4B9980059F07D /* WeatherGridForecastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherGridForecastModel.h; sourceTree = "<group>"; };
+		248556F922A4B9980059F07D /* AlarmAllModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmAllModel.h; sourceTree = "<group>"; };
+		248556FA22A4B9980059F07D /* AlarmAllModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmAllModel.m; sourceTree = "<group>"; };
+		248556FC22A4B9980059F07D /* WetherResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WetherResponseModel.h; sourceTree = "<group>"; };
+		248556FD22A4B9980059F07D /* SearchWetherResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchWetherResponseModel.h; sourceTree = "<group>"; };
+		248556FE22A4B9980059F07D /* WetherResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WetherResponseModel.m; sourceTree = "<group>"; };
+		248556FF22A4B9980059F07D /* SearchWetherResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchWetherResponseModel.m; sourceTree = "<group>"; };
+		2485570122A4B9980059F07D /* AirModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirModel.m; sourceTree = "<group>"; };
+		2485570222A4B9980059F07D /* AirModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirModel.h; sourceTree = "<group>"; };
+		2485570422A4B9980059F07D /* WeatherGridNowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherGridNowModel.h; sourceTree = "<group>"; };
+		2485570522A4B9980059F07D /* WeatherGridNowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherGridNowModel.m; sourceTree = "<group>"; };
+		2485570822A4B9980059F07D /* TopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopModel.h; sourceTree = "<group>"; };
+		2485570922A4B9980059F07D /* TopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopModel.m; sourceTree = "<group>"; };
+		2485570B22A4B9980059F07D /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
+		2485570C22A4B9980059F07D /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		2485570E22A4B9980059F07D /* WeatherLifestyleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherLifestyleModel.m; sourceTree = "<group>"; };
+		2485570F22A4B9980059F07D /* WeatherLifestyleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherLifestyleModel.h; sourceTree = "<group>"; };
+		2485571122A4B9980059F07D /* AirHourlyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirHourlyModel.m; sourceTree = "<group>"; };
+		2485571222A4B9980059F07D /* AirHourlyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirHourlyModel.h; sourceTree = "<group>"; };
+		2485571422A4B9980059F07D /* SolarElevationAngleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolarElevationAngleModel.m; sourceTree = "<group>"; };
+		2485571522A4B9980059F07D /* SolarElevationAngleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolarElevationAngleModel.h; sourceTree = "<group>"; };
+		2485571722A4B9980059F07D /* WeatherForecastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherForecastModel.m; sourceTree = "<group>"; };
+		2485571822A4B9980059F07D /* WeatherForecastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastModel.h; sourceTree = "<group>"; };
+		2485571A22A4B9980059F07D /* WeatherHourlyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherHourlyModel.m; sourceTree = "<group>"; };
+		2485571B22A4B9980059F07D /* WeatherHourlyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherHourlyModel.h; sourceTree = "<group>"; };
 		8374325D20D912C20016D88E /* DataBaseClasses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseClasses.h; sourceTree = "<group>"; };
 		83C86E6420BBB51F003DAD9D /* HeWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HeWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C86E6720BBB51F003DAD9D /* HeWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeWeather.h; sourceTree = "<group>"; };
@@ -167,241 +167,249 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24855654229FCE970059F07D /* Models */ = {
+		248556D322A4B9980059F07D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2485565E229FCE970059F07D /* WetherResponseModel.h */,
-				24855678229FCE970059F07D /* WetherResponseModel.m */,
-				24855668229FCE970059F07D /* SearchWetherResponseModel.h */,
-				2485568F229FCE970059F07D /* SearchWetherResponseModel.m */,
-				24855655229FCE970059F07D /* ScenicModel */,
-				24855658229FCE970059F07D /* AirNowModel */,
-				2485565B229FCE970059F07D /* SolarSunriseSunsetModel */,
-				2485565F229FCE970059F07D /* FindModel */,
-				24855662229FCE970059F07D /* AlarmModel */,
-				24855665229FCE970059F07D /* WeatherHistoricalModel */,
-				24855669229FCE970059F07D /* WeatherGridMinuteModel */,
-				2485566C229FCE970059F07D /* WeatherNowModel */,
-				2485566F229FCE970059F07D /* SearchModel */,
-				24855672229FCE970059F07D /* WeatherGridHourlyModel */,
-				24855675229FCE970059F07D /* AirForecastModel */,
-				24855679229FCE970059F07D /* WeatherGridForecastModel */,
-				2485567C229FCE970059F07D /* AlarmAllModel */,
-				2485567F229FCE970059F07D /* AirModel */,
-				24855682229FCE970059F07D /* WeatherGridNowModel */,
-				24855685229FCE970059F07D /* TopModel */,
-				24855689229FCE970059F07D /* WeatherModel */,
-				2485568C229FCE970059F07D /* WeatherLifestyleModel */,
-				24855690229FCE970059F07D /* AirHourlyModel */,
-				24855693229FCE970059F07D /* SolarElevationAngleModel */,
-				24855696229FCE970059F07D /* WeatherForecastModel */,
-				24855699229FCE970059F07D /* WeatherHourlyModel */,
+				248556D422A4B9980059F07D /* ScenicModel */,
+				248556D722A4B9980059F07D /* AirNowModel */,
+				248556DA22A4B9980059F07D /* SolarSunriseSunsetModel */,
+				248556DD22A4B9980059F07D /* FindModel */,
+				248556E022A4B9980059F07D /* AlarmModel */,
+				248556E322A4B9980059F07D /* WeatherHistoricalModel */,
+				248556E622A4B9980059F07D /* WeatherGridMinuteModel */,
+				248556E922A4B9980059F07D /* WeatherNowModel */,
+				248556EC22A4B9980059F07D /* SearchModel */,
+				248556EF22A4B9980059F07D /* WeatherGridHourlyModel */,
+				248556F222A4B9980059F07D /* AirForecastModel */,
+				248556F522A4B9980059F07D /* WeatherGridForecastModel */,
+				248556F822A4B9980059F07D /* AlarmAllModel */,
+				248556FB22A4B9980059F07D /* Model */,
+				2485570022A4B9980059F07D /* AirModel */,
+				2485570322A4B9980059F07D /* WeatherGridNowModel */,
+				2485570622A4B9980059F07D /* TopModel */,
+				2485570A22A4B9980059F07D /* WeatherModel */,
+				2485570D22A4B9980059F07D /* WeatherLifestyleModel */,
+				2485571022A4B9980059F07D /* AirHourlyModel */,
+				2485571322A4B9980059F07D /* SolarElevationAngleModel */,
+				2485571622A4B9980059F07D /* WeatherForecastModel */,
+				2485571922A4B9980059F07D /* WeatherHourlyModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		24855655229FCE970059F07D /* ScenicModel */ = {
+		248556D422A4B9980059F07D /* ScenicModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855656229FCE970059F07D /* ScenicModel.h */,
-				24855657229FCE970059F07D /* ScenicModel.m */,
+				248556D522A4B9980059F07D /* ScenicModel.h */,
+				248556D622A4B9980059F07D /* ScenicModel.m */,
 			);
 			path = ScenicModel;
 			sourceTree = "<group>";
 		};
-		24855658229FCE970059F07D /* AirNowModel */ = {
+		248556D722A4B9980059F07D /* AirNowModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855659229FCE970059F07D /* AirNowModel.m */,
-				2485565A229FCE970059F07D /* AirNowModel.h */,
+				248556D822A4B9980059F07D /* AirNowModel.m */,
+				248556D922A4B9980059F07D /* AirNowModel.h */,
 			);
 			path = AirNowModel;
 			sourceTree = "<group>";
 		};
-		2485565B229FCE970059F07D /* SolarSunriseSunsetModel */ = {
+		248556DA22A4B9980059F07D /* SolarSunriseSunsetModel */ = {
 			isa = PBXGroup;
 			children = (
-				2485565C229FCE970059F07D /* SolarSunriseSunsetModel.h */,
-				2485565D229FCE970059F07D /* SolarSunriseSunsetModel.m */,
+				248556DB22A4B9980059F07D /* SolarSunriseSunsetModel.h */,
+				248556DC22A4B9980059F07D /* SolarSunriseSunsetModel.m */,
 			);
 			path = SolarSunriseSunsetModel;
 			sourceTree = "<group>";
 		};
-		2485565F229FCE970059F07D /* FindModel */ = {
+		248556DD22A4B9980059F07D /* FindModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855660229FCE970059F07D /* FindModel.h */,
-				24855661229FCE970059F07D /* FindModel.m */,
+				248556DE22A4B9980059F07D /* FindModel.h */,
+				248556DF22A4B9980059F07D /* FindModel.m */,
 			);
 			path = FindModel;
 			sourceTree = "<group>";
 		};
-		24855662229FCE970059F07D /* AlarmModel */ = {
+		248556E022A4B9980059F07D /* AlarmModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855663229FCE970059F07D /* AlarmModel.h */,
-				24855664229FCE970059F07D /* AlarmModel.m */,
+				248556E122A4B9980059F07D /* AlarmModel.h */,
+				248556E222A4B9980059F07D /* AlarmModel.m */,
 			);
 			path = AlarmModel;
 			sourceTree = "<group>";
 		};
-		24855665229FCE970059F07D /* WeatherHistoricalModel */ = {
+		248556E322A4B9980059F07D /* WeatherHistoricalModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855666229FCE970059F07D /* WeatherHistoricalModel.h */,
-				24855667229FCE970059F07D /* WeatherHistoricalModel.m */,
+				248556E422A4B9980059F07D /* WeatherHistoricalModel.h */,
+				248556E522A4B9980059F07D /* WeatherHistoricalModel.m */,
 			);
 			path = WeatherHistoricalModel;
 			sourceTree = "<group>";
 		};
-		24855669229FCE970059F07D /* WeatherGridMinuteModel */ = {
+		248556E622A4B9980059F07D /* WeatherGridMinuteModel */ = {
 			isa = PBXGroup;
 			children = (
-				2485566A229FCE970059F07D /* WeatherGridMinuteModel.h */,
-				2485566B229FCE970059F07D /* WeatherGridMinuteModel.m */,
+				248556E722A4B9980059F07D /* WeatherGridMinuteModel.h */,
+				248556E822A4B9980059F07D /* WeatherGridMinuteModel.m */,
 			);
 			path = WeatherGridMinuteModel;
 			sourceTree = "<group>";
 		};
-		2485566C229FCE970059F07D /* WeatherNowModel */ = {
+		248556E922A4B9980059F07D /* WeatherNowModel */ = {
 			isa = PBXGroup;
 			children = (
-				2485566D229FCE970059F07D /* WeatherNowModel.h */,
-				2485566E229FCE970059F07D /* WeatherNowModel.m */,
+				248556EA22A4B9980059F07D /* WeatherNowModel.h */,
+				248556EB22A4B9980059F07D /* WeatherNowModel.m */,
 			);
 			path = WeatherNowModel;
 			sourceTree = "<group>";
 		};
-		2485566F229FCE970059F07D /* SearchModel */ = {
+		248556EC22A4B9980059F07D /* SearchModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855670229FCE970059F07D /* SearchModel.h */,
-				24855671229FCE970059F07D /* SearchModel.m */,
+				248556ED22A4B9980059F07D /* SearchModel.h */,
+				248556EE22A4B9980059F07D /* SearchModel.m */,
 			);
 			path = SearchModel;
 			sourceTree = "<group>";
 		};
-		24855672229FCE970059F07D /* WeatherGridHourlyModel */ = {
+		248556EF22A4B9980059F07D /* WeatherGridHourlyModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855673229FCE970059F07D /* WeatherGridHourlyModel.m */,
-				24855674229FCE970059F07D /* WeatherGridHourlyModel.h */,
+				248556F022A4B9980059F07D /* WeatherGridHourlyModel.m */,
+				248556F122A4B9980059F07D /* WeatherGridHourlyModel.h */,
 			);
 			path = WeatherGridHourlyModel;
 			sourceTree = "<group>";
 		};
-		24855675229FCE970059F07D /* AirForecastModel */ = {
+		248556F222A4B9980059F07D /* AirForecastModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855676229FCE970059F07D /* AirForecastModel.m */,
-				24855677229FCE970059F07D /* AirForecastModel.h */,
+				248556F322A4B9980059F07D /* AirForecastModel.m */,
+				248556F422A4B9980059F07D /* AirForecastModel.h */,
 			);
 			path = AirForecastModel;
 			sourceTree = "<group>";
 		};
-		24855679229FCE970059F07D /* WeatherGridForecastModel */ = {
+		248556F522A4B9980059F07D /* WeatherGridForecastModel */ = {
 			isa = PBXGroup;
 			children = (
-				2485567A229FCE970059F07D /* WeatherGridForecastModel.m */,
-				2485567B229FCE970059F07D /* WeatherGridForecastModel.h */,
+				248556F622A4B9980059F07D /* WeatherGridForecastModel.m */,
+				248556F722A4B9980059F07D /* WeatherGridForecastModel.h */,
 			);
 			path = WeatherGridForecastModel;
 			sourceTree = "<group>";
 		};
-		2485567C229FCE970059F07D /* AlarmAllModel */ = {
+		248556F822A4B9980059F07D /* AlarmAllModel */ = {
 			isa = PBXGroup;
 			children = (
-				2485567D229FCE970059F07D /* AlarmAllModel.h */,
-				2485567E229FCE970059F07D /* AlarmAllModel.m */,
+				248556F922A4B9980059F07D /* AlarmAllModel.h */,
+				248556FA22A4B9980059F07D /* AlarmAllModel.m */,
 			);
 			path = AlarmAllModel;
 			sourceTree = "<group>";
 		};
-		2485567F229FCE970059F07D /* AirModel */ = {
+		248556FB22A4B9980059F07D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				24855680229FCE970059F07D /* AirModel.m */,
-				24855681229FCE970059F07D /* AirModel.h */,
+				248556FC22A4B9980059F07D /* WetherResponseModel.h */,
+				248556FD22A4B9980059F07D /* SearchWetherResponseModel.h */,
+				248556FE22A4B9980059F07D /* WetherResponseModel.m */,
+				248556FF22A4B9980059F07D /* SearchWetherResponseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2485570022A4B9980059F07D /* AirModel */ = {
+			isa = PBXGroup;
+			children = (
+				2485570122A4B9980059F07D /* AirModel.m */,
+				2485570222A4B9980059F07D /* AirModel.h */,
 			);
 			path = AirModel;
 			sourceTree = "<group>";
 		};
-		24855682229FCE970059F07D /* WeatherGridNowModel */ = {
+		2485570322A4B9980059F07D /* WeatherGridNowModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855683229FCE970059F07D /* WeatherGridNowModel.h */,
-				24855684229FCE970059F07D /* WeatherGridNowModel.m */,
+				2485570422A4B9980059F07D /* WeatherGridNowModel.h */,
+				2485570522A4B9980059F07D /* WeatherGridNowModel.m */,
 			);
 			path = WeatherGridNowModel;
 			sourceTree = "<group>";
 		};
-		24855685229FCE970059F07D /* TopModel */ = {
+		2485570622A4B9980059F07D /* TopModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855686229FCE970059F07D /* TopModel */,
+				2485570722A4B9980059F07D /* TopModel */,
 			);
 			path = TopModel;
 			sourceTree = "<group>";
 		};
-		24855686229FCE970059F07D /* TopModel */ = {
+		2485570722A4B9980059F07D /* TopModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855687229FCE970059F07D /* TopModel.h */,
-				24855688229FCE970059F07D /* TopModel.m */,
+				2485570822A4B9980059F07D /* TopModel.h */,
+				2485570922A4B9980059F07D /* TopModel.m */,
 			);
 			path = TopModel;
 			sourceTree = "<group>";
 		};
-		24855689229FCE970059F07D /* WeatherModel */ = {
+		2485570A22A4B9980059F07D /* WeatherModel */ = {
 			isa = PBXGroup;
 			children = (
-				2485568A229FCE970059F07D /* WeatherModel.m */,
-				2485568B229FCE970059F07D /* WeatherModel.h */,
+				2485570B22A4B9980059F07D /* WeatherModel.m */,
+				2485570C22A4B9980059F07D /* WeatherModel.h */,
 			);
 			path = WeatherModel;
 			sourceTree = "<group>";
 		};
-		2485568C229FCE970059F07D /* WeatherLifestyleModel */ = {
+		2485570D22A4B9980059F07D /* WeatherLifestyleModel */ = {
 			isa = PBXGroup;
 			children = (
-				2485568D229FCE970059F07D /* WeatherLifestyleModel.m */,
-				2485568E229FCE970059F07D /* WeatherLifestyleModel.h */,
+				2485570E22A4B9980059F07D /* WeatherLifestyleModel.m */,
+				2485570F22A4B9980059F07D /* WeatherLifestyleModel.h */,
 			);
 			path = WeatherLifestyleModel;
 			sourceTree = "<group>";
 		};
-		24855690229FCE970059F07D /* AirHourlyModel */ = {
+		2485571022A4B9980059F07D /* AirHourlyModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855691229FCE970059F07D /* AirHourlyModel.m */,
-				24855692229FCE970059F07D /* AirHourlyModel.h */,
+				2485571122A4B9980059F07D /* AirHourlyModel.m */,
+				2485571222A4B9980059F07D /* AirHourlyModel.h */,
 			);
 			path = AirHourlyModel;
 			sourceTree = "<group>";
 		};
-		24855693229FCE970059F07D /* SolarElevationAngleModel */ = {
+		2485571322A4B9980059F07D /* SolarElevationAngleModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855694229FCE970059F07D /* SolarElevationAngleModel.m */,
-				24855695229FCE970059F07D /* SolarElevationAngleModel.h */,
+				2485571422A4B9980059F07D /* SolarElevationAngleModel.m */,
+				2485571522A4B9980059F07D /* SolarElevationAngleModel.h */,
 			);
 			path = SolarElevationAngleModel;
 			sourceTree = "<group>";
 		};
-		24855696229FCE970059F07D /* WeatherForecastModel */ = {
+		2485571622A4B9980059F07D /* WeatherForecastModel */ = {
 			isa = PBXGroup;
 			children = (
-				24855697229FCE970059F07D /* WeatherForecastModel.m */,
-				24855698229FCE970059F07D /* WeatherForecastModel.h */,
+				2485571722A4B9980059F07D /* WeatherForecastModel.m */,
+				2485571822A4B9980059F07D /* WeatherForecastModel.h */,
 			);
 			path = WeatherForecastModel;
 			sourceTree = "<group>";
 		};
-		24855699229FCE970059F07D /* WeatherHourlyModel */ = {
+		2485571922A4B9980059F07D /* WeatherHourlyModel */ = {
 			isa = PBXGroup;
 			children = (
-				2485569A229FCE970059F07D /* WeatherHourlyModel.m */,
-				2485569B229FCE970059F07D /* WeatherHourlyModel.h */,
+				2485571A22A4B9980059F07D /* WeatherHourlyModel.m */,
+				2485571B22A4B9980059F07D /* WeatherHourlyModel.h */,
 			);
 			path = WeatherHourlyModel;
 			sourceTree = "<group>";
@@ -456,7 +464,7 @@
 				83C86E8420BBB5B1003DAD9D /* AllWeatherInquieirs+Tool.h */,
 				83C86E8120BBB5B1003DAD9D /* AllWeatherInquieirs+Tool.m */,
 				83C86E6820BBB51F003DAD9D /* Info.plist */,
-				24855654229FCE970059F07D /* Models */,
+				248556D322A4B9980059F07D /* Models */,
 			);
 			path = HeWeather;
 			sourceTree = "<group>";
@@ -477,35 +485,35 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2485572A22A4B9980059F07D /* WeatherNowModel.h in Headers */,
+				2485574122A4B9980059F07D /* WeatherModel.h in Headers */,
+				2485573C22A4B9980059F07D /* WeatherGridNowModel.h in Headers */,
+				2485573422A4B9980059F07D /* AlarmAllModel.h in Headers */,
+				2485574B22A4B9980059F07D /* WeatherHourlyModel.h in Headers */,
+				2485573122A4B9980059F07D /* AirForecastModel.h in Headers */,
 				83C86E8920BBB5B1003DAD9D /* AllWeatherInquieirs.h in Headers */,
-				248556C0229FCE970059F07D /* WeatherModel.h in Headers */,
-				248556BB229FCE970059F07D /* WeatherGridNowModel.h in Headers */,
+				2485572622A4B9980059F07D /* WeatherHistoricalModel.h in Headers */,
+				2485572222A4B9980059F07D /* FindModel.h in Headers */,
+				2485572422A4B9980059F07D /* AlarmModel.h in Headers */,
+				2485574322A4B9980059F07D /* WeatherLifestyleModel.h in Headers */,
 				8374325E20D9139D0016D88E /* DataBaseClasses.h in Headers */,
-				248556CB229FCE970059F07D /* WeatherHourlyModel.h in Headers */,
-				248556A9229FCE970059F07D /* SearchWetherResponseModel.h in Headers */,
+				2485574522A4B9980059F07D /* AirHourlyModel.h in Headers */,
 				83C86E8620BBB5B1003DAD9D /* AllWeatherInquieirs+Property.h in Headers */,
+				2485573722A4B9980059F07D /* SearchWetherResponseModel.h in Headers */,
 				83C86E8A20BBB5B1003DAD9D /* AllWeatherInquieirs+Request.h in Headers */,
-				248556A5229FCE970059F07D /* AlarmModel.h in Headers */,
-				248556A3229FCE970059F07D /* FindModel.h in Headers */,
-				248556C2229FCE970059F07D /* WeatherLifestyleModel.h in Headers */,
-				2485569F229FCE970059F07D /* AirNowModel.h in Headers */,
-				248556C5229FCE970059F07D /* AirHourlyModel.h in Headers */,
-				248556AE229FCE970059F07D /* SearchModel.h in Headers */,
-				248556B7229FCE970059F07D /* AlarmAllModel.h in Headers */,
-				248556A0229FCE970059F07D /* SolarSunriseSunsetModel.h in Headers */,
-				248556BD229FCE970059F07D /* TopModel.h in Headers */,
-				248556C9229FCE970059F07D /* WeatherForecastModel.h in Headers */,
-				248556BA229FCE970059F07D /* AirModel.h in Headers */,
-				248556AA229FCE970059F07D /* WeatherGridMinuteModel.h in Headers */,
+				2485573E22A4B9980059F07D /* TopModel.h in Headers */,
+				2485574922A4B9980059F07D /* WeatherForecastModel.h in Headers */,
+				2485573B22A4B9980059F07D /* AirModel.h in Headers */,
+				2485572F22A4B9980059F07D /* WeatherGridHourlyModel.h in Headers */,
+				2485572C22A4B9980059F07D /* SearchModel.h in Headers */,
+				2485571F22A4B9980059F07D /* AirNowModel.h in Headers */,
+				2485572822A4B9980059F07D /* WeatherGridMinuteModel.h in Headers */,
+				2485572022A4B9980059F07D /* SolarSunriseSunsetModel.h in Headers */,
+				2485573322A4B9980059F07D /* WeatherGridForecastModel.h in Headers */,
 				83C86E7520BBB51F003DAD9D /* HeWeather.h in Headers */,
-				2485569C229FCE970059F07D /* ScenicModel.h in Headers */,
-				248556AC229FCE970059F07D /* WeatherNowModel.h in Headers */,
-				248556B6229FCE970059F07D /* WeatherGridForecastModel.h in Headers */,
-				248556A7229FCE970059F07D /* WeatherHistoricalModel.h in Headers */,
-				248556B3229FCE970059F07D /* AirForecastModel.h in Headers */,
-				248556C7229FCE970059F07D /* SolarElevationAngleModel.h in Headers */,
-				248556A2229FCE970059F07D /* WetherResponseModel.h in Headers */,
-				248556B1229FCE970059F07D /* WeatherGridHourlyModel.h in Headers */,
+				2485574722A4B9980059F07D /* SolarElevationAngleModel.h in Headers */,
+				2485571C22A4B9980059F07D /* ScenicModel.h in Headers */,
+				2485573622A4B9980059F07D /* WetherResponseModel.h in Headers */,
 				83C86E8B20BBB5B1003DAD9D /* AllWeatherInquieirs+Tool.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,33 +637,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				248556A4229FCE970059F07D /* FindModel.m in Sources */,
+				2485572322A4B9980059F07D /* FindModel.m in Sources */,
+				2485573F22A4B9980059F07D /* TopModel.m in Sources */,
+				2485573522A4B9980059F07D /* AlarmAllModel.m in Sources */,
+				2485574422A4B9980059F07D /* AirHourlyModel.m in Sources */,
 				83C86E8820BBB5B1003DAD9D /* AllWeatherInquieirs+Tool.m in Sources */,
-				248556BC229FCE970059F07D /* WeatherGridNowModel.m in Sources */,
-				248556C4229FCE970059F07D /* AirHourlyModel.m in Sources */,
-				248556A8229FCE970059F07D /* WeatherHistoricalModel.m in Sources */,
-				248556CA229FCE970059F07D /* WeatherHourlyModel.m in Sources */,
-				248556B5229FCE970059F07D /* WeatherGridForecastModel.m in Sources */,
-				248556AD229FCE970059F07D /* WeatherNowModel.m in Sources */,
-				248556B0229FCE970059F07D /* WeatherGridHourlyModel.m in Sources */,
-				248556C6229FCE970059F07D /* SolarElevationAngleModel.m in Sources */,
+				2485574A22A4B9980059F07D /* WeatherHourlyModel.m in Sources */,
+				2485572722A4B9980059F07D /* WeatherHistoricalModel.m in Sources */,
+				2485572B22A4B9980059F07D /* WeatherNowModel.m in Sources */,
+				2485572E22A4B9980059F07D /* WeatherGridHourlyModel.m in Sources */,
+				2485574622A4B9980059F07D /* SolarElevationAngleModel.m in Sources */,
 				83C86E8720BBB5B1003DAD9D /* AllWeatherInquieirs+Request.m in Sources */,
-				248556AB229FCE970059F07D /* WeatherGridMinuteModel.m in Sources */,
-				2485569D229FCE970059F07D /* ScenicModel.m in Sources */,
-				248556C1229FCE970059F07D /* WeatherLifestyleModel.m in Sources */,
-				248556C8229FCE970059F07D /* WeatherForecastModel.m in Sources */,
+				2485574022A4B9980059F07D /* WeatherModel.m in Sources */,
+				2485572922A4B9980059F07D /* WeatherGridMinuteModel.m in Sources */,
+				2485574222A4B9980059F07D /* WeatherLifestyleModel.m in Sources */,
+				2485574822A4B9980059F07D /* WeatherForecastModel.m in Sources */,
+				2485571D22A4B9980059F07D /* ScenicModel.m in Sources */,
 				83C86E8520BBB5B1003DAD9D /* AllWeatherInquieirs.m in Sources */,
-				248556B9229FCE970059F07D /* AirModel.m in Sources */,
-				248556BF229FCE970059F07D /* WeatherModel.m in Sources */,
-				248556B2229FCE970059F07D /* AirForecastModel.m in Sources */,
-				248556BE229FCE970059F07D /* TopModel.m in Sources */,
-				248556C3229FCE970059F07D /* SearchWetherResponseModel.m in Sources */,
-				248556A6229FCE970059F07D /* AlarmModel.m in Sources */,
-				2485569E229FCE970059F07D /* AirNowModel.m in Sources */,
-				248556A1229FCE970059F07D /* SolarSunriseSunsetModel.m in Sources */,
-				248556B4229FCE970059F07D /* WetherResponseModel.m in Sources */,
-				248556B8229FCE970059F07D /* AlarmAllModel.m in Sources */,
-				248556AF229FCE970059F07D /* SearchModel.m in Sources */,
+				2485573A22A4B9980059F07D /* AirModel.m in Sources */,
+				2485573D22A4B9980059F07D /* WeatherGridNowModel.m in Sources */,
+				2485573222A4B9980059F07D /* WeatherGridForecastModel.m in Sources */,
+				2485573022A4B9980059F07D /* AirForecastModel.m in Sources */,
+				2485573822A4B9980059F07D /* WetherResponseModel.m in Sources */,
+				2485572522A4B9980059F07D /* AlarmModel.m in Sources */,
+				2485571E22A4B9980059F07D /* AirNowModel.m in Sources */,
+				2485573922A4B9980059F07D /* SearchWetherResponseModel.m in Sources */,
+				2485572122A4B9980059F07D /* SolarSunriseSunsetModel.m in Sources */,
+				2485572D22A4B9980059F07D /* SearchModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,3 @@
 @implementation WeatherGridHourlyModel
 
 @end
-
-@implementation GridHourly
-
-@end

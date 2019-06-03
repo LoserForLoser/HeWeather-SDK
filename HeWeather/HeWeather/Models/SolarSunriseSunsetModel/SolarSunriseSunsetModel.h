@@ -10,19 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class SunriseSunset;
-
 @interface SolarSunriseSunsetModel : WetherResponseModel
 
-@property (nonatomic, strong) SunriseSunset *sunrise_sunset;
-
-@end
-
-@interface SunriseSunset : NSObject
-
-@property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *sr;
-@property (nonatomic, strong) NSString *ss;
+@property (nonatomic, strong) WeatherData *sunrise_sunset;
 
 @end
 

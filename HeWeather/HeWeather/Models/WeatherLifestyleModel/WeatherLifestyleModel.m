@@ -11,7 +11,3 @@
 @implementation WeatherLifestyleModel
 
 @end
-
-@implementation Lifestyle
-
-@end

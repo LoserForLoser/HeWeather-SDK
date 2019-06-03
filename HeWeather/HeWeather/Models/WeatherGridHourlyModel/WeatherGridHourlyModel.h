@@ -10,23 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class GridHourly;
-
 @interface WeatherGridHourlyModel : WetherResponseModel
 
-@property (nonatomic, copy) NSArray <GridHourly*>*grid_hourly;
-
-@end
-
-@interface GridHourly : NSObject
-
-@property (nonatomic, strong) NSString *cond_code;
-@property (nonatomic, strong) NSString *cond_txt;
-@property (nonatomic, strong) NSString *pcpn;
-@property (nonatomic, strong) NSString *time;
-@property (nonatomic, strong) NSString *tmp;
-@property (nonatomic, strong) NSString *wind_dir;
-@property (nonatomic, strong) NSString *wind_sc;
+@property (nonatomic, copy) NSArray <WeatherData *>*grid_hourly;
 
 @end
 

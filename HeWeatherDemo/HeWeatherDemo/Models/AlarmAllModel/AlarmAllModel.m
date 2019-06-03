@@ -11,7 +11,3 @@
 @implementation AlarmAllModel
 
 @end
-
-@implementation AlarmList
-
-@end

@@ -10,32 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class Hourly;
-
 @interface WeatherHourlyModel : WetherResponseModel
 
-@property (nonatomic, strong) NSArray <Hourly *>*hourly;
-
-@end
-
-@interface Hourly : NSObject
-
-@property (nonatomic, strong) NSString *cond_code_d;
-@property (nonatomic, strong) NSString *cond_code_n;
-@property (nonatomic, strong) NSString *cond_txt_d;
-@property (nonatomic, strong) NSString *cond_txt_n;
-@property (nonatomic, strong) NSString *hum;
-@property (nonatomic, strong) NSString *pcpn;
-@property (nonatomic, strong) NSString *pop;
-@property (nonatomic, strong) NSString *pres;
-@property (nonatomic, strong) NSString *tmp_max;
-@property (nonatomic, strong) NSString *tmp_min;
-@property (nonatomic, strong) NSString *uv_index;
-@property (nonatomic, strong) NSString *vis;
-@property (nonatomic, strong) NSString *wind_deg;
-@property (nonatomic, strong) NSString *wind_dir;
-@property (nonatomic, strong) NSString *wind_sc;
-@property (nonatomic, strong) NSString *wind_spd;
+@property (nonatomic, strong) NSArray <WeatherData *>*hourly;
 
 @end
 

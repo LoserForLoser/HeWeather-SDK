@@ -11,7 +11,3 @@
 @implementation AirNowModel
 
 @end
-
-@implementation AirNowCity
-
-@end

@@ -10,31 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class AirNowCity;
-
 @interface AirNowModel : WetherResponseModel
 
-@property (nonatomic, strong) AirNowCity *air_now_city;
-@property (nonatomic, copy) NSArray <AirNowCity *>*air_now_station;
-
-@end
-
-@interface AirNowCity : NSObject
-
-@property (nonatomic, strong) NSString *air_sta;
-@property (nonatomic, strong) NSString *aqi;
-@property (nonatomic, strong) NSString *asid;
-@property (nonatomic, strong) NSString *co;
-@property (nonatomic, strong) NSString *lat;
-@property (nonatomic, strong) NSString *lon;
-@property (nonatomic, strong) NSString *main;
-@property (nonatomic, strong) NSString *no2;
-@property (nonatomic, strong) NSString *o3;
-@property (nonatomic, strong) NSString *pm10;
-@property (nonatomic, strong) NSString *pm25;
-@property (nonatomic, strong) NSString *pub_time;
-@property (nonatomic, strong) NSString *qlty;
-@property (nonatomic, strong) NSString *so2;
+@property (nonatomic, strong) AirData *air_now_city;
+@property (nonatomic, copy) NSArray <AirData *>*air_now_station;
 
 @end
 

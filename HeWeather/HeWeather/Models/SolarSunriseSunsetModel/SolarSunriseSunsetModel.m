@@ -11,7 +11,3 @@
 @implementation SolarSunriseSunsetModel
 
 @end
-
-@implementation SunriseSunset
-
-@end

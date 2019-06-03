@@ -11,11 +11,3 @@
 @implementation WeatherHistoricalModel
 
 @end
-
-@implementation DailyWeather
-
-@end
-
-@implementation HourlyWeather
-
-@end

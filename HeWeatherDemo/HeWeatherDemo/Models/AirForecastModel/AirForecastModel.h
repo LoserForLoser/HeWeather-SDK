@@ -10,20 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class AirForecast;
-
 @interface AirForecastModel : WetherResponseModel
 
-@property (nonatomic, strong) AirForecast *air_forecast;
-
-@end
-
-@interface AirForecast : NSObject
-
-@property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *aqi;
-@property (nonatomic, strong) NSString *main;
-@property (nonatomic, strong) NSString *qlty;
+@property (nonatomic, strong) AirData *air_forecast;
 
 @end
 

@@ -11,7 +11,3 @@
 @implementation ScenicModel
 
 @end
-
-@implementation ScenicDailyForecast
-
-@end

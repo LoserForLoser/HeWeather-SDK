@@ -11,7 +11,3 @@
 @implementation WeatherGridNowModel
 
 @end
-
-@implementation GridNow
-
-@end

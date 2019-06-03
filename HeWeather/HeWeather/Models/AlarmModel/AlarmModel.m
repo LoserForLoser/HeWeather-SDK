@@ -11,7 +11,3 @@
 @implementation AlarmModel
 
 @end
-
-@implementation Alarm
-
-@end

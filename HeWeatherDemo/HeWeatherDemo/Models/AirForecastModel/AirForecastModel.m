@@ -11,7 +11,3 @@
 @implementation AirForecastModel
 
 @end
-
-@implementation AirForecast
-
-@end

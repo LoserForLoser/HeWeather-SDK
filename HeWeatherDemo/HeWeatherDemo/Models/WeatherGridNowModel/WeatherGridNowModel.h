@@ -10,25 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class GridNow;
-
 @interface WeatherGridNowModel : WetherResponseModel
 
-@property (nonatomic, strong) GridNow *grid_now;
-
-@end
-
-@interface GridNow : NSObject
-
-@property (nonatomic, strong) NSString *cond_code;
-@property (nonatomic, strong) NSString *cond_txt;
-@property (nonatomic, strong) NSString *hum;
-@property (nonatomic, strong) NSString *pcpn;
-@property (nonatomic, strong) NSString *pcpn_10m;
-@property (nonatomic, strong) NSString *pres;
-@property (nonatomic, strong) NSString *tmp;
-@property (nonatomic, strong) NSString *wind_dir;
-@property (nonatomic, strong) NSString *wind_sc;
+@property (nonatomic, strong) WeatherData *grid_now;
 
 @end
 

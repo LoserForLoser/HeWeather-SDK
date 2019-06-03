@@ -7,19 +7,16 @@
 //
 
 #import "WetherResponseModel.h"
-#import "WeatherForecastModel.h"
-#import "WeatherHourlyModel.h"
 #import "WeatherLifestyleModel.h"
-#import "WeatherNowModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WeatherModel : WetherResponseModel
 
-@property (nonatomic, copy) NSArray <DailyForecast *>*daily_forecast;
-@property (nonatomic, copy) NSArray <Hourly *>*hourly;
+@property (nonatomic, copy) NSArray <WeatherData *>*daily_forecast;
+@property (nonatomic, copy) NSArray <WeatherData *>*hourly;
 @property (nonatomic, copy) NSArray <Lifestyle *>*lifestyle;
-@property (nonatomic, strong) Now *now;
+@property (nonatomic, strong) WeatherData *now;
 
 @end
 

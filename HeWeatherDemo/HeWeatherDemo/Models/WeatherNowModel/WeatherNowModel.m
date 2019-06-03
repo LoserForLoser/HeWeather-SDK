@@ -11,7 +11,3 @@
 @implementation WeatherNowModel
 
 @end
-
-@implementation Now
-
-@end

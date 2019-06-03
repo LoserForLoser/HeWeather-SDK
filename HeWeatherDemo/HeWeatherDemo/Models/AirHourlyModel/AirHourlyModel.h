@@ -7,13 +7,12 @@
 //
 
 #import "WetherResponseModel.h"
-#import "AirForecastModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AirHourlyModel : WetherResponseModel
 
-@property (nonatomic, strong) NSArray <AirForecast *>*air_hourly;
+@property (nonatomic, strong) NSArray <AirData *>*air_hourly;
 
 @end
 

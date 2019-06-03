@@ -7,23 +7,12 @@
 //
 
 #import "WetherResponseModel.h"
-#import "WeatherForecastModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class DailyForecast;
-
 @interface ScenicModel : WetherResponseModel
 
-@property (nonatomic, strong) DailyForecast *ScenicDailyForecast;
-
-@end
-
-@interface ScenicDailyForecast : DailyForecast
-
-@property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *sr;
-@property (nonatomic, strong) NSString *ss;
+@property (nonatomic, strong) WeatherData *ScenicDailyForecast;
 
 @end
 

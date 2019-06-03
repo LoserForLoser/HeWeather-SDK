@@ -10,22 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class AlarmList;
-
 @interface AlarmAllModel : WetherResponseModel
 
-@property (nonatomic, copy) NSArray <AlarmList *>*alarm_list;
-
-@end
-
-@interface AlarmList : NSObject
-
-@property (nonatomic, strong) NSString *cid;
-@property (nonatomic, strong) NSString *stat;
-@property (nonatomic, strong) NSString *level;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *type;
-@property (nonatomic, strong) NSString *txt;
+@property (nonatomic, copy) NSArray <AlarmMessage *>*alarm_list;
 
 @end
 

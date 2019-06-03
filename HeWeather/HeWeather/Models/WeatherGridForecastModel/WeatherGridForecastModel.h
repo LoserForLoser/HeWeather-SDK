@@ -10,27 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class GridForecast;
-
 @interface WeatherGridForecastModel : WetherResponseModel
 
-@property (nonatomic, strong) NSArray <GridForecast *>*grid_forecast;
-
-@end
-
-@interface GridForecast : NSObject
-
-@property (nonatomic, strong) NSString *cond_code_d;
-@property (nonatomic, strong) NSString *cond_code_n;
-@property (nonatomic, strong) NSString *cond_txt_d;
-@property (nonatomic, strong) NSString *cond_txt_n;
-@property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *tmp_max;
-@property (nonatomic, strong) NSString *tmp_min;
-@property (nonatomic, strong) NSString *wind_dir_d;
-@property (nonatomic, strong) NSString *wind_dir_n;
-@property (nonatomic, strong) NSString *wind_sc_d;
-@property (nonatomic, strong) NSString *wind_sc_n;
+@property (nonatomic, strong) NSArray <WeatherData *>*grid_forecast;
 
 @end
 
