@@ -43,8 +43,7 @@
 
 - (void)AFNetworkActionWitchGET:(NSString *)URLString
                      parameters:(id)parameters
-                        success:(void (^)(id _Nullable))success
-                        failure:(void (^)(NSError * _Nonnull))failure {
+                       response:(void (^ _Nullable)(id _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error))response {
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     if ([URLString isEqualToString:@"https://search.heweather.com/top"]) {
@@ -54,12 +53,12 @@
     [manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
+        if (response) {
+            response(responseObject, task, [NSError new]);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failure) {
-            failure(error);
+        if (response) {
+            response(nil, task, error);
         }
     }];
 }

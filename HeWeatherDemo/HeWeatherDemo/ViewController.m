@@ -67,8 +67,7 @@
 }
 
 - (void)weatherRequestWithType:(INQUIRE_TYPE)inquireType {
-    [allWeather weatherWithInquireType:inquireType WithSuccess:^(id responseObject) {
-        
+    [allWeather weatherWithInquireType:inquireType response:^(id  _Nullable responseObject, NSError * _Nullable error) {
         switch (inquireType) {
             case INQUIRE_TYPE_WEATHER_FORECAST:{
                 WeatherForecastModel *weatherForecastModel = responseObject;
@@ -191,8 +190,8 @@
                 break;
         }
         
-    } faileureForError:^(NSError *error) {
         NSLog(@"%@", error.userInfo);
+
     }];
 }
 

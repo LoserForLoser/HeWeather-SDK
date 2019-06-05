@@ -23,8 +23,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  weather/forecast
  */
 
-- (void)weatherForecastWithSuccess:(void(^)(id responseObject))getSuccess
-                  faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherForecastWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather/forecast",self.kAppServerAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -34,13 +33,10 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     [parameter setObject:self.unit forKey:@"unit"];
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -49,8 +45,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  实况天气
  weather/now
  */
-- (void)weatherNowWithSuccess:(void(^)(id responseObject))getSuccess
-             faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherNowWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather/now",self.kAppServerAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -61,13 +56,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -77,8 +68,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  weather/hourly
  */
 
-- (void)weatherHourlyWithSuccess:(void(^)(id responseObject))getSuccess
-                faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherHourlyWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather/hourly",self.kAppServerAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -89,13 +79,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -105,8 +91,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  weather/lifestyle
  */
 
-- (void)weatherLifestyleWithSuccess:(void(^)(id responseObject))getSuccess
-                   faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherLifestyleWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather/lifestyle",self.kAppServerAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -117,13 +102,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -133,8 +114,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  weather
  */
 
-- (void)weatherWithSuccess:(void(^)(id responseObject))getSuccess
-          faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather",self.kAppServerAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -145,13 +125,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -161,8 +137,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  weather/grid-minute
  */
 
-- (void)weatherGridMinuteWithSuccess:(void(^)(id responseObject))getSuccess
-                    faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherGridMinuteWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-minute",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -173,13 +148,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -189,8 +160,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  weather/grid-now
  */
 
-- (void)weatherGridNowWithSuccess:(void(^)(id responseObject))getSuccess
-                 faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherGridNowWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-now",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -201,13 +171,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -217,8 +183,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  weather/grid-forecast
  */
 
-- (void)weatherGridForecastWithSuccess:(void(^)(id responseObject))getSuccess
-                      faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherGridForecastWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-forecast",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -229,13 +194,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -245,8 +206,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  weather/grid-hourly
  */
 
-- (void)weatherGridHourlyWithSuccess:(void(^)(id responseObject))getSuccess
-                    faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherGridHourlyWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather/grid-hourly",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -257,13 +217,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -273,8 +229,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  alarm
  */
 
-- (void)alarmWithSuccess:(void(^)(id responseObject))getSuccess
-        faileureForError:(void(^)(NSError *error))getError {
+- (void)alarmWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@alarm",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -285,13 +240,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -301,8 +252,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  alarm/all
  */
 
-- (void)alarmAllWithSuccess:(void(^)(id responseObject))getSuccess
-           faileureForError:(void(^)(NSError *error))getError {
+- (void)alarmAllWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@alarm/all",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.username forKey:@"username"];
@@ -310,13 +260,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -326,8 +272,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  scenic
  */
 
-- (void)scenicWithSuccess:(void(^)(id responseObject))getSuccess
-         faileureForError:(void(^)(NSError *error))getError {
+- (void)scenicWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@scenic",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -338,13 +283,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -354,8 +295,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  air/now
  */
 
-- (void)airNowWithSuccess:(void(^)(id responseObject))getSuccess
-         faileureForError:(void(^)(NSError *error))getError {
+- (void)airNowWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@air/now",self.kAppServerAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -366,13 +306,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -382,8 +318,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  air/forecast
  */
 
-- (void)airForecastWithSuccess:(void(^)(id responseObject))getSuccess
-              faileureForError:(void(^)(NSError *error))getError {
+- (void)airForecastWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@air/forecast",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -394,13 +329,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -410,8 +341,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  air/hourly
  */
 
-- (void)airHourlyWithSuccess:(void(^)(id responseObject))getSuccess
-            faileureForError:(void(^)(NSError *error))getError {
+- (void)airHourlyWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@air/hourly",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -422,13 +352,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -438,8 +364,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  air
  */
 
-- (void)airWithSuccess:(void(^)(id responseObject))getSuccess
-      faileureForError:(void(^)(NSError *error))getError {
+- (void)airWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@air",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -450,13 +375,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -466,8 +387,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  weather/historical
  */
 
-- (void)weatherHistoricalWithSuccess:(void(^)(id responseObject))getSuccess
-                    faileureForError:(void(^)(NSError *error))getError {
+- (void)weatherHistoricalWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@weather/historical",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -477,13 +397,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -493,8 +409,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  solar/sunrise-sunset
  */
 
-- (void)solarSunriseSunsetWithSuccess:(void(^)(id responseObject))getSuccess
-                     faileureForError:(void(^)(NSError *error))getError {
+- (void)solarSunriseSunsetWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@solar/sunrise-sunset",self.kAppServerAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -505,13 +420,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -521,13 +432,12 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  map/cloudmap
  */
 
-- (void)mapCloudmapWithSuccess:(void(^)(id responseObject))getSuccess
-              faileureForError:(void(^)(NSError *error))getError {
+- (void)mapCloudmapWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     if (!self.username || [self.username isEqualToString:@""] || !self.t || [self.t isEqualToString:@""]) {
         NSDictionary *userInfoMessage = [NSDictionary dictionaryWithObjectsAndKeys:@"参数不能为空！", nil];
-        if (getError) {
+        if (response) {
             NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:-999 userInfo:userInfoMessage];
-            getError(error);
+            response(nil, error);
             return;
         }
     }
@@ -551,8 +461,8 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     
     UIImage *mapCloudmapImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", urlString, tempString]]]];
     
-    if (getSuccess) {
-        getSuccess(mapCloudmapImage);
+    if (response) {
+        response(mapCloudmapImage, nil);
     }
 }
 
@@ -561,8 +471,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  solar/solar-elevation-angle
  */
 
-- (void)solarElevationAngleWithSuccess:(void(^)(id responseObject))getSuccess
-                      faileureForError:(void(^)(NSError *error))getError {
+- (void)solarElevationAngleWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@solar/solar-elevation-angle",kAppHeweatherAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.lat forKey:@"lat"];
@@ -576,13 +485,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -592,8 +497,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  search
  */
 
-- (void)searchWithSuccess:(void(^)(id responseObject))getSuccess
-         faileureForError:(void(^)(NSError *error))getError {
+- (void)searchWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@search",self.kAppServerAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -603,13 +507,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -621,8 +521,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  find
  */
 
-- (void)findWithSuccess:(void(^)(id responseObject))getSuccess
-         faileureForError:(void(^)(NSError *error))getError {
+- (void)findWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@find",kAppSearchAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.location forKey:@"location"];
@@ -635,13 +534,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }
@@ -651,8 +546,7 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
  top
  */
 
-- (void)topWithSuccess:(void(^)(id responseObject))getSuccess
-         faileureForError:(void(^)(NSError *error))getError {
+- (void)topWithResponse:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     NSString *urlString = [NSString stringWithFormat:@"%@top",kAppSearchAPIURL];
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     [parameter setObject:self.group forKey:@"group"];
@@ -662,13 +556,9 @@ NSString * const kAppSearchAPIURL = @"https://search.heweather.com/";
     self.sign = [self signToEncryptionStringWithDataDictionary:parameter];
     [parameter setObject:self.sign forKey:@"sign"];
     
-    [self AFNetworkActionWitchGET:urlString parameters:parameter success:^(id _Nullable responseObject) {
-        if (getSuccess) {
-            getSuccess(responseObject);
-        }
-    } failure:^(NSError * _Nonnull error) {
-        if (getError) {
-            getError(error);
+    [self AFNetworkActionWitchGET:urlString parameters:parameter response:^(id  _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (response) {
+            response(responseObject, error);
         }
     }];
 }

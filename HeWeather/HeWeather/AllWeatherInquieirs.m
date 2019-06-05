@@ -180,8 +180,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
 #pragma mark - Inquire Action
 
 - (void)weatherWithInquireType:(INQUIRE_TYPE)inquireType
-                   WithSuccess:(void(^)(id responseObject))getSuccess
-              faileureForError:(void(^)(NSError *error))getError {
+                      response:(void (^)(id _Nullable responseObject, NSError * _Nullable error))response {
     [self startLocation];
     
     defaults = [NSUserDefaults standardUserDefaults];
@@ -214,90 +213,66 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
         
         switch (inquireType) {
             case INQUIRE_TYPE_WEATHER_FORECAST:{
-                [self weatherForecastWithSuccess:^(id responseObject) {
+                [self weatherForecastWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     WeatherForecastModel *weatherForecastModel = [WeatherForecastModel mj_objectWithKeyValues:responseObject];
                     WeatherForecastModel *weatherForecastModelResponse = (WeatherForecastModel *)weatherForecastModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(weatherForecastModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(weatherForecastModelResponse, error);
                     }
                 }];
             }
                 break;
             case INQUIRE_TYPE_WEATHER_NOW:{
-                [self weatherNowWithSuccess:^(id responseObject) {
+                [self weatherNowWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     WeatherNowModel *weatherNowModel = [WeatherNowModel mj_objectWithKeyValues:responseObject];
                     WeatherNowModel *weatherNowModelResponse = (WeatherNowModel *)weatherNowModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(weatherNowModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(weatherNowModelResponse, error);
                     }
                 }];
             }
                 break;
             case INQUIRE_TYPE_WEATHER_HOURLY:{
-                [self weatherHourlyWithSuccess:^(id responseObject) {
+                [self weatherHourlyWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     WeatherHourlyModel *weatherHourlyModel = [WeatherHourlyModel mj_objectWithKeyValues:responseObject];
                     WeatherHourlyModel *weatherHourlyModelResponse = (WeatherHourlyModel *)weatherHourlyModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(weatherHourlyModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(weatherHourlyModelResponse, error);
                     }
                 }];
             }
                 break;
             case INQUIRE_TYPE_WEATHER_LIFESTYLE:{
-                [self weatherLifestyleWithSuccess:^(id responseObject) {
+                [self weatherLifestyleWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     WeatherLifestyleModel *weatherLifestyleModel = [WeatherLifestyleModel mj_objectWithKeyValues:responseObject];
                     WeatherLifestyleModel *weatherLifestyleModelResponse = (WeatherLifestyleModel *)weatherLifestyleModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(weatherLifestyleModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(weatherLifestyleModelResponse, error);
                     }
                 }];
             }
                 break;
             case INQUIRE_TYPE_WEATHER:{
-                [self weatherWithSuccess:^(id responseObject) {
+                [self weatherWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     WeatherModel *weatherModel = [WeatherModel mj_objectWithKeyValues:responseObject];
                     WeatherModel *weatherModelResponse = (WeatherModel *)weatherModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(weatherModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(weatherModelResponse, error);
                     }
                 }];
             }
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_MINUTE:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self weatherGridMinuteWithSuccess:^(id responseObject) {
+                    [self weatherGridMinuteWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         WeatherGridMinuteModel *weatherGridMinuteModel = [WeatherGridMinuteModel mj_objectWithKeyValues:responseObject];
                         WeatherGridMinuteModel *weatherGridMinuteModelResponse = (WeatherGridMinuteModel *)weatherGridMinuteModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(weatherGridMinuteModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(weatherGridMinuteModelResponse, error);
                         }
                     }];
                 }
@@ -305,19 +280,15 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_NOW:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self weatherGridNowWithSuccess:^(id responseObject) {
+                    [self weatherGridNowWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         WeatherGridNowModel *weatherGridNowModel = [WeatherGridNowModel mj_objectWithKeyValues:responseObject];
                         WeatherGridNowModel *weatherGridNowModelResponse = (WeatherGridNowModel *)weatherGridNowModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(weatherGridNowModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(weatherGridNowModelResponse, error);
                         }
                     }];
                 }
@@ -325,19 +296,15 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_FORECAST:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self weatherGridForecastWithSuccess:^(id responseObject) {
+                    [self weatherGridForecastWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         WeatherGridForecastModel *weatherGridForecastModel = [WeatherGridForecastModel mj_objectWithKeyValues:responseObject];
                         WeatherGridForecastModel *weatherGridForecastModelResponse = (WeatherGridForecastModel *)weatherGridForecastModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(weatherGridForecastModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(weatherGridForecastModelResponse, error);
                         }
                     }];
                 }
@@ -345,19 +312,15 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_GRID_HOURLY:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self weatherGridHourlyWithSuccess:^(id responseObject) {
+                    [self weatherGridHourlyWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         WeatherGridHourlyModel *weatherGridHourlyModel = [WeatherGridHourlyModel mj_objectWithKeyValues:responseObject];
                         WeatherGridHourlyModel *weatherGridHourlyModelResponse = (WeatherGridHourlyModel *)weatherGridHourlyModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(weatherGridHourlyModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(weatherGridHourlyModelResponse, error);
                         }
                     }];
                 }
@@ -365,19 +328,15 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_ALARM:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self alarmWithSuccess:^(id responseObject) {
+                    [self alarmWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         AlarmModel *alarmModel = [AlarmModel mj_objectWithKeyValues:responseObject];
                         AlarmModel *alarmModelResponse = (AlarmModel *)alarmModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(alarmModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(alarmModelResponse, error);
                         }
                     }];
                 }
@@ -385,19 +344,15 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_ALARM_ALL:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self alarmAllWithSuccess:^(id responseObject) {
+                    [self alarmAllWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         AlarmAllModel *alarmAllModel = [AlarmAllModel mj_objectWithKeyValues:responseObject];
                         AlarmAllModel *alarmAllModelResponse = (AlarmAllModel *)alarmAllModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(alarmAllModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(alarmAllModelResponse, error);
                         }
                     }];
                 }
@@ -405,53 +360,41 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_SCENIC:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self scenicWithSuccess:^(id responseObject) {
+                    [self scenicWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         ScenicModel *scenicModel = [ScenicModel mj_objectWithKeyValues:responseObject];
                         ScenicModel *scenicModelResponse = (ScenicModel *)scenicModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(scenicModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(scenicModelResponse, error);
                         }
                     }];
                 }
             }
                 break;
             case INQUIRE_TYPE_AIR_NOW:{
-                [self airNowWithSuccess:^(id responseObject) {
+                [self airNowWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     AirNowModel *airNowModel = [AirNowModel mj_objectWithKeyValues:responseObject];
                     AirNowModel *airNowModelResponse = (AirNowModel *)airNowModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(airNowModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(airNowModelResponse, error);
                     }
                 }];
             }
                 break;
             case INQUIRE_TYPE_AIR_FORECAST:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self airForecastWithSuccess:^(id responseObject) {
+                    [self airForecastWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         AirForecastModel *airForecastModel = [AirForecastModel mj_objectWithKeyValues:responseObject];
                         AirForecastModel *airForecastModelResponse = (AirForecastModel *)airForecastModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(airForecastModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(airForecastModelResponse, error);
                         }
                     }];
                 }
@@ -459,19 +402,15 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_AIR_HOURLY:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self airHourlyWithSuccess:^(id responseObject) {
+                    [self airHourlyWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         AirHourlyModel *airHourlyModel = [AirHourlyModel mj_objectWithKeyValues:responseObject];
                         AirHourlyModel *airHourlyModelResponse = (AirHourlyModel *)airHourlyModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(airHourlyModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(airHourlyModelResponse, error);
                         }
                     }];
                 }
@@ -479,19 +418,15 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_AIR:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self airWithSuccess:^(id responseObject) {
+                    [self airWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         AirModel *airModel = [AirModel mj_objectWithKeyValues:responseObject];
                         AirModel *airModelResponse = (AirModel *)airModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(airModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(airModelResponse, error);
                         }
                     }];
                 }
@@ -499,51 +434,39 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_HISTORICAL:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self weatherHistoricalWithSuccess:^(id responseObject) {
+                    [self weatherHistoricalWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         WeatherHistoricalModel *weatherHistoricalModel = [WeatherHistoricalModel mj_objectWithKeyValues:responseObject];
                         WeatherHistoricalModel *weatherHistoricalModelResponse = (WeatherHistoricalModel *)weatherHistoricalModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(weatherHistoricalModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(weatherHistoricalModelResponse, error);
                         }
                     }];
                 }
             }
                 break;
             case INQUIRE_TYPE_SOLAR_SUNRISE_SUNSET:{
-                [self solarSunriseSunsetWithSuccess:^(id responseObject) {
+                [self solarSunriseSunsetWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     SolarSunriseSunsetModel *solarSunriseSunsetModel = [SolarSunriseSunsetModel mj_objectWithKeyValues:responseObject];
                     SolarSunriseSunsetModel *solarSunriseSunsetModelResponse = (SolarSunriseSunsetModel *)solarSunriseSunsetModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(solarSunriseSunsetModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(solarSunriseSunsetModelResponse, error);
                     }
                 }];
             }
                 break;
             case INQUIRE_TYPE_MAP_CLOUD_MAP:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self mapCloudmapWithSuccess:^(id responseObject) {
-                        if (getSuccess) {
-                            getSuccess(responseObject);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                    [self mapCloudmapWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
+                        if (response) {
+                            response(responseObject, error);
                         }
                     }];
                 }
@@ -551,72 +474,56 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_SOLAR_ELEVATION_ANGLR:{
                 if (self.userType == USER_TYPE_FREE_USER) {
-                    if (getError) {
-                        getError([self prohibitRequest]);
+                    if (response) {
+                        response(nil, [self prohibitRequest]);
                     }
                 } else {
-                    [self solarElevationAngleWithSuccess:^(id responseObject) {
+                    [self solarElevationAngleWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                         SolarElevationAngleModel *solarElevationAngleModel = [SolarElevationAngleModel mj_objectWithKeyValues:responseObject];
                         SolarElevationAngleModel *solarElevationAngleModelResponse = (SolarElevationAngleModel *)solarElevationAngleModel.HeWeather6.firstObject;
-                        if (getSuccess) {
-                            getSuccess(solarElevationAngleModelResponse);
-                        }
-                    } faileureForError:^(NSError *error) {
-                        if (getError) {
-                            getError(error);
+                        if (response) {
+                            response(solarElevationAngleModelResponse, error);
                         }
                     }];
                 }
             }
                 break;
             case INQUIRE_TYPE_SEARCH:{
-                [self searchWithSuccess:^(id responseObject) {
+                [self searchWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     SearchModel *searchModel = [SearchModel mj_objectWithKeyValues:responseObject];
                     SearchModel *searchModelResponse = (SearchModel *)searchModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(searchModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(searchModelResponse, error);
                     }
                 }];
             }
                 break;
             case INQUIRE_TYPE_FIND:{
-                [self findWithSuccess:^(id responseObject) {
+                [self findWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     FindModel *findModel = [FindModel mj_objectWithKeyValues:responseObject];
                     FindModel *findModelResponse = (FindModel *)findModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(findModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(findModelResponse, error);
                     }
                 }];
             }
                 break;
             case INQUIRE_TYPE_TOP:{
-                [self topWithSuccess:^(id responseObject) {
+                [self topWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
                     TopModel *topModel = [TopModel mj_objectWithKeyValues:responseObject];
                     TopModel *topModelResponse = (TopModel *)topModel.HeWeather6.firstObject;
-                    if (getSuccess) {
-                        getSuccess(topModelResponse);
-                    }
-                } faileureForError:^(NSError *error) {
-                    if (getError) {
-                        getError(error);
+                    if (response) {
+                        response(topModelResponse, error);
                     }
                 }];
             }
                 break;
                 
             default: {
-                if (getError) {
+                if (response) {
                     NSDictionary *userInfo1 = [NSDictionary dictionaryWithObject:@"请选择查询类型！" forKey:@"RequestError"];
                     NSError *error = [NSError errorWithDomain:NSCocoaErrorDomain code:-999 userInfo:userInfo1];
-                    getError(error);
+                    response(nil, error);
                 }
             }
                 break;

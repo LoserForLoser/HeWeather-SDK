@@ -11,7 +11,7 @@
 @interface AllWeatherInquieirs (Tool)
 
 - (void)startLocation;
-- (void)AFNetworkActionWitchGET:(NSString *_Nonnull)URLString parameters:(id _Nullable )parameters success:(void (^_Nullable)(id _Nullable))success failure:(void (^_Nullable)(NSError * _Nonnull))failure;
+- (void)AFNetworkActionWitchGET:(NSString *_Nonnull)URLString parameters:(id _Nullable )parameters response:(void (^_Nullable)(id _Nullable responseObject, NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error))response;
 - (NSString *_Nonnull)currentTimeStr;
 - (NSString *_Nonnull)signToEncryptionStringWithDataDictionary:(NSDictionary *_Nonnull)dataDictionary;
 

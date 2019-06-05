@@ -14,183 +14,138 @@
  3-10天天气预报
  weather/forecast
  */
-
-- (void)weatherForecastWithSuccess:(void(^)(id responseObject))getSuccess
-                  faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherForecastWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  实况天气
  weather/now
  */
-- (void)weatherNowWithSuccess:(void(^)(id responseObject))getSuccess
-             faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherNowWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  逐小时预报
  weather/hourly
  */
-
-- (void)weatherHourlyWithSuccess:(void(^)(id responseObject))getSuccess
-                faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherHourlyWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  生活指数
  weather/lifestyle
  */
-
-- (void)weatherLifestyleWithSuccess:(void(^)(id responseObject))getSuccess
-                   faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherLifestyleWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  常规天气数据集合
  weather
  */
-
-- (void)weatherWithSuccess:(void(^)(id responseObject))getSuccess
-          faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  分钟级降雨（邻近预报）
  weather/grid-minute
  */
-
-- (void)weatherGridMinuteWithSuccess:(void(^)(id responseObject))getSuccess
-                    faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherGridMinuteWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  格点实况天气
  weather/grid-now
  */
-
-- (void)weatherGridNowWithSuccess:(void(^)(id responseObject))getSuccess
-                 faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherGridNowWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  格点7天预报
  weather/grid-forecast
  */
-
-- (void)weatherGridForecastWithSuccess:(void(^)(id responseObject))getSuccess
-                      faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherGridForecastWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  格点逐小时预报
  weather/grid-hourly
  */
-
-- (void)weatherGridHourlyWithSuccess:(void(^)(id responseObject))getSuccess
-                    faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherGridHourlyWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  天气灾害预警
  alarm
  */
-
-- (void)alarmWithSuccess:(void(^)(id responseObject))getSuccess
-        faileureForError:(void(^)(NSError *error))getError;
+- (void)alarmWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  天气灾害预警集合
  alarm/all
  */
-
-- (void)alarmAllWithSuccess:(void(^)(id responseObject))getSuccess
-           faileureForError:(void(^)(NSError *error))getError;
+- (void)alarmAllWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  景点天气预报
  scenic
  */
-
-- (void)scenicWithSuccess:(void(^)(id responseObject))getSuccess
-         faileureForError:(void(^)(NSError *error))getError;
+- (void)scenicWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  空气质量实况
  air/now
  */
-
-- (void)airNowWithSuccess:(void(^)(id responseObject))getSuccess
-         faileureForError:(void(^)(NSError *error))getError;
+- (void)airNowWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  空气质量7天预报
  air/forecast
  */
-
-- (void)airForecastWithSuccess:(void(^)(id responseObject))getSuccess
-              faileureForError:(void(^)(NSError *error))getError;
+- (void)airForecastWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  空气质量逐小时预报
  air/hourly
  */
-
-- (void)airHourlyWithSuccess:(void(^)(id responseObject))getSuccess
-            faileureForError:(void(^)(NSError *error))getError;
+- (void)airHourlyWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  空气质量数据集合
  air
  */
-
-- (void)airWithSuccess:(void(^)(id responseObject))getSuccess
-      faileureForError:(void(^)(NSError *error))getError;
+- (void)airWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  历史天气
  weather/historical
  */
-
-- (void)weatherHistoricalWithSuccess:(void(^)(id responseObject))getSuccess
-                    faileureForError:(void(^)(NSError *error))getError;
+- (void)weatherHistoricalWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  日出日落
  solar/sunrise-sunset
  */
-
-- (void)solarSunriseSunsetWithSuccess:(void(^)(id responseObject))getSuccess
-                     faileureForError:(void(^)(NSError *error))getError;
+- (void)solarSunriseSunsetWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  卫星云图
  map/cloudmap
  */
-
-- (void)mapCloudmapWithSuccess:(void(^)(id responseObject))getSuccess
-              faileureForError:(void(^)(NSError *error))getError;
+- (void)mapCloudmapWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  太阳高度
  solar/solar-elevation-angle
  */
-
-- (void)solarElevationAngleWithSuccess:(void(^)(id responseObject))getSuccess
-                      faileureForError:(void(^)(NSError *error))getError;
+- (void)solarElevationAngleWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  城市查询
  search
  */
-
-- (void)searchWithSuccess:(void(^)(id responseObject))getSuccess
-         faileureForError:(void(^)(NSError *error))getError;
+- (void)searchWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  城市搜索
  find
  */
-
-- (void)findWithSuccess:(void(^)(id responseObject))getSuccess
-       faileureForError:(void(^)(NSError *error))getError;
+- (void)findWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 /**
  热门城市列表
  top
  */
-
-- (void)topWithSuccess:(void(^)(id responseObject))getSuccess
-      faileureForError:(void(^)(NSError *error))getError;
+- (void)topWithResponse:(void (^ _Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 @end

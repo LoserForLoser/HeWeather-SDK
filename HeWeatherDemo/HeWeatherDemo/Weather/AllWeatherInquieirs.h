@@ -223,7 +223,6 @@ typedef NS_ENUM(NSInteger, MODE_TYPE) {
  */
 
 - (void)weatherWithInquireType:(INQUIRE_TYPE)inquireType
-                   WithSuccess:(void(^)(id responseObject))getSuccess
-              faileureForError:(void(^)(NSError *error))getError;
+                      response:(void (^_Nullable)(id _Nullable responseObject, NSError * _Nullable error))response;
 
 @end
