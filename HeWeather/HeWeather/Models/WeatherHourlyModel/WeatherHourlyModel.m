@@ -10,4 +10,10 @@
 
 @implementation WeatherHourlyModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"hourly" : @"WeatherData"
+             };
+}
+
 @end

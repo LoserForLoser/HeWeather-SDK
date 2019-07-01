@@ -10,4 +10,11 @@
 
 @implementation AirModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"air_hourly" : @"AirData",
+             @"air_now_station" : @"AirData"
+             };
+}
+
 @end

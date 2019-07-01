@@ -17,27 +17,27 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WeatherGridMinuteModel : WetherResponseModel
 
 @property (nonatomic, strong) GridMinuteForecast *grid_minute_forecast;
-@property (nonatomic, copy) NSArray <Pcpn5m *>*pcpn_5m;
+@property (nonatomic, strong) NSArray <Pcpn5m *>*pcpn_5m;
 @property (nonatomic, strong) PcpnType *pcpn_type;
 
 @end
 
 @interface GridMinuteForecast : NSObject
 
-@property (nonatomic, copy) NSString *date;
+@property (nonatomic, strong) NSString *date;
 
 @end
 
 @interface Pcpn5m : NSObject
 
-@property (nonatomic, copy) NSString *pcpn;
-@property (nonatomic, copy) NSString *time;
+@property (nonatomic, strong) NSString *pcpn;
+@property (nonatomic, strong) NSString *time;
 
 @end
 
 @interface PcpnType : NSObject
 
-@property (nonatomic, copy) NSString *pcpn_type;
+@property (nonatomic, strong) NSString *pcpn_type;
 
 @end
 

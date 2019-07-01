@@ -10,4 +10,10 @@
 
 @implementation WeatherForecastModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"daily_forecast" : @"WeatherData"
+             };
+}
+
 @end

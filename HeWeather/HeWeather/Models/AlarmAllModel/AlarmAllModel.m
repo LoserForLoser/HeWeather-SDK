@@ -10,4 +10,10 @@
 
 @implementation AlarmAllModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"alarm_list" : @"AlarmMessage"
+             };
+}
+
 @end

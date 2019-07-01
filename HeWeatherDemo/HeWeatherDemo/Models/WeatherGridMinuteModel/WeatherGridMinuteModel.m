@@ -10,6 +10,12 @@
 
 @implementation WeatherGridMinuteModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"pcpn_5m" : @"Pcpn5m"
+             };
+}
+
 @end
 
 @implementation GridMinuteForecast

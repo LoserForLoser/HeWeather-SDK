@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WeatherGridHourlyModel : WetherResponseModel
 
-@property (nonatomic, copy) NSArray <WeatherData *>*grid_hourly;
+@property (nonatomic, strong) NSArray <WeatherData *>*grid_hourly;
 
 @end
 

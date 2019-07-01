@@ -10,4 +10,10 @@
 
 @implementation WeatherGridForecastModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"grid_forecast" : @"WeatherData"
+             };
+}
+
 @end

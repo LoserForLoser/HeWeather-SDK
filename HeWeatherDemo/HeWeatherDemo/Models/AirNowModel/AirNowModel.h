@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AirNowModel : WetherResponseModel
 
 @property (nonatomic, strong) AirData *air_now_city;
-@property (nonatomic, copy) NSArray <AirData *>*air_now_station;
+@property (nonatomic, strong) NSArray <AirData *>*air_now_station;
 
 @end
 

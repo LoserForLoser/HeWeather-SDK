@@ -10,4 +10,10 @@
 
 @implementation WeatherHistoricalModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"hourly_weather" : @"WeatherData"
+             };
+}
+
 @end

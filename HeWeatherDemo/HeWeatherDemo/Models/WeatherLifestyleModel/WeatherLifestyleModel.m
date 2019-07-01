@@ -10,4 +10,10 @@
 
 @implementation WeatherLifestyleModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"lifestyle" : @"Lifestyle"
+             };
+}
+
 @end

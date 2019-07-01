@@ -11,6 +11,12 @@
 
 @implementation WetherResponseModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"HeWeather6" : @"WetherResponseModel"
+             };
+}
+
 + (NSString *)mj_replacedKeyFromPropertyName121:(NSString *)propertyName {
     return [propertyName mj_underlineFromCamel];
 }

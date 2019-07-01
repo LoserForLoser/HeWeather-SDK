@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AlarmAllModel : WetherResponseModel
 
-@property (nonatomic, copy) NSArray <AlarmMessage *>*alarm_list;
+@property (nonatomic, strong) NSArray <AlarmMessage *>*alarm_list;
 
 @end
 

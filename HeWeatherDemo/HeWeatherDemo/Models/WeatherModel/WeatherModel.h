@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WeatherModel : WetherResponseModel
 
-@property (nonatomic, copy) NSArray <WeatherData *>*daily_forecast;
-@property (nonatomic, copy) NSArray <WeatherData *>*hourly;
-@property (nonatomic, copy) NSArray <Lifestyle *>*lifestyle;
+@property (nonatomic, strong) NSArray <WeatherData *>*daily_forecast;
+@property (nonatomic, strong) NSArray <WeatherData *>*hourly;
+@property (nonatomic, strong) NSArray <Lifestyle *>*lifestyle;
 @property (nonatomic, strong) WeatherData *now;
 
 @end

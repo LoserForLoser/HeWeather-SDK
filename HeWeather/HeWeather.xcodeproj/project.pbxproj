@@ -318,8 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				248556FC22A4B9980059F07D /* WetherResponseModel.h */,
-				248556FD22A4B9980059F07D /* SearchWetherResponseModel.h */,
 				248556FE22A4B9980059F07D /* WetherResponseModel.m */,
+				248556FD22A4B9980059F07D /* SearchWetherResponseModel.h */,
 				248556FF22A4B9980059F07D /* SearchWetherResponseModel.m */,
 			);
 			path = Model;

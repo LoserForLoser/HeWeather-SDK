@@ -10,4 +10,10 @@
 
 @implementation WeatherGridHourlyModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"grid_hourly" : @"WeatherData"
+             };
+}
+
 @end
