@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - MJExtension (3.0.17)
+  - MJExtension (3.2.1)
 
 DEPENDENCIES:
   - AFNetworking
@@ -27,7 +27,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
 
 PODFILE CHECKSUM: 10b5c79360e695427ab1dde7330288f1c004ff31
 

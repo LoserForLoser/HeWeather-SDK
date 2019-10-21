@@ -1,5 +1,5 @@
 //
-//  SearchWetherResponseModel.h
+//  SearchWeatherResponseModel.h
 //  HeWeatherDemo
 //
 //  Created by 宋朝阳 on 2019/5/30.
@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WetherResponseModel.h"
+#import "WeatherResponseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class SearchCity;
 
-@interface SearchWetherResponseModel : NSObject
+@interface SearchWeatherResponseModel : NSObject
 
-@property (nonatomic, strong) NSArray <SearchWetherResponseModel *>*HeWeather6;
+@property (nonatomic, strong) NSArray <SearchWeatherResponseModel *>*HeWeather6;
 @property (nonatomic, strong) NSArray <Basic *>*basic;
 @property (nonatomic, strong) NSString *status;
 

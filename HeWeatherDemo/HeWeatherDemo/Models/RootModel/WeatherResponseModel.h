@@ -1,5 +1,5 @@
 //
-//  WetherResponseModel.h
+//  WeatherResponseModel.h
 //  HeWeatherDemo
 //
 //  Created by 宋朝阳 on 2019/5/29.
@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @class Basic;
 @class Update;
 
-@interface WetherResponseModel : NSObject
+@interface WeatherResponseModel : NSObject
 
-@property (nonatomic, strong) NSArray <WetherResponseModel *>*HeWeather6;
+@property (nonatomic, strong) NSArray <WeatherResponseModel *>*HeWeather6;
 @property (nonatomic, strong) Basic *basic;
 @property (nonatomic, strong) Update *update;
 @property (nonatomic, strong) NSString *status;

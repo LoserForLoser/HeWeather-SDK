@@ -6,12 +6,12 @@
 //  Copyright © 2019 宋朝阳. All rights reserved.
 //
 
-#import "WetherResponseModel.h"
+#import "WeatherResponseModel.h"
 #import "WeatherLifestyleModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WeatherModel : WetherResponseModel
+@interface WeatherModel : WeatherResponseModel
 
 @property (nonatomic, strong) NSArray <WeatherData *>*daily_forecast;
 @property (nonatomic, strong) NSArray <WeatherData *>*hourly;

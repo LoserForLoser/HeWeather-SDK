@@ -6,7 +6,7 @@
 //  Copyright © 2019 宋朝阳. All rights reserved.
 //
 
-#import "WetherResponseModel.h"
+#import "WeatherResponseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class Pcpn5m;
 @class PcpnType;
 
-@interface WeatherGridMinuteModel : WetherResponseModel
+@interface WeatherGridMinuteModel : WeatherResponseModel
 
 @property (nonatomic, strong) GridMinuteForecast *grid_minute_forecast;
 @property (nonatomic, strong) NSArray <Pcpn5m *>*pcpn_5m;

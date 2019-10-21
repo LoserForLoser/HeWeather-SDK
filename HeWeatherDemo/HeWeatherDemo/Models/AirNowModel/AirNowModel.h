@@ -6,11 +6,11 @@
 //  Copyright © 2019 宋朝阳. All rights reserved.
 //
 
-#import "WetherResponseModel.h"
+#import "WeatherResponseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AirNowModel : WetherResponseModel
+@interface AirNowModel : WeatherResponseModel
 
 @property (nonatomic, strong) AirData *air_now_city;
 @property (nonatomic, strong) NSArray <AirData *>*air_now_station;

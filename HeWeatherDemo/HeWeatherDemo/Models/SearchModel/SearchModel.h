@@ -6,14 +6,14 @@
 //  Copyright © 2019 宋朝阳. All rights reserved.
 //
 
-#import "WetherResponseModel.h"
-#import "SearchWetherResponseModel.h"
+#import "WeatherResponseModel.h"
+#import "SearchWeatherResponseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class Search;
 
-@interface SearchModel : WetherResponseModel
+@interface SearchModel : WeatherResponseModel
 
 @property (nonatomic, strong) SearchCity *search;
 

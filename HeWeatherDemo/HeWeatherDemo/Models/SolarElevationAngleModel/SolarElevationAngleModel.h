@@ -6,13 +6,13 @@
 //  Copyright © 2019 宋朝阳. All rights reserved.
 //
 
-#import "WetherResponseModel.h"
+#import "WeatherResponseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class SolarElevationAngle;
 
-@interface SolarElevationAngleModel : WetherResponseModel
+@interface SolarElevationAngleModel : WeatherResponseModel
 
 @property (nonatomic, strong) SolarElevationAngle *solar_elevation_angle;
 

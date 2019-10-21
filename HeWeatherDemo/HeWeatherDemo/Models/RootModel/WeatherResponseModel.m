@@ -1,19 +1,19 @@
 //
-//  WetherResponseModel.m
+//  WeatherResponseModel.m
 //  HeWeatherDemo
 //
 //  Created by 宋朝阳 on 2019/5/29.
 //  Copyright © 2019 宋朝阳. All rights reserved.
 //
 
-#import "WetherResponseModel.h"
+#import "WeatherResponseModel.h"
 #import "MJExtension.h"
 
-@implementation WetherResponseModel
+@implementation WeatherResponseModel
 
 + (NSDictionary *)mj_objectClassInArray {
     return @{
-             @"HeWeather6" : @"WetherResponseModel"
+             @"HeWeather6" : @"WeatherResponseModel"
              };
 }
 
