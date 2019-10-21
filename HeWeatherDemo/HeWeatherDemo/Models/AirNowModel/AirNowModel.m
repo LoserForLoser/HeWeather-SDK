@@ -10,9 +10,9 @@
 
 @implementation AirNowModel
 
-+ (NSDictionary *)mj_objectClassInArray {
++ (NSDictionary *)modelContainerPropertyGenericClass {
     return @{
-             @"air_now_station" : @"AirData"
+             @"air_now_station" : AirData.class
              };
 }
 

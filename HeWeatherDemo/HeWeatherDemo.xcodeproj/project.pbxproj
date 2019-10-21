@@ -380,10 +380,10 @@
 		240F9B0A235D3ECD00FFF67B /* RootModel */ = {
 			isa = PBXGroup;
 			children = (
-				240F9B0B235D3ECD00FFF67B /* WeatherResponseModel.h */,
 				240F9B0C235D3ECD00FFF67B /* SearchWeatherResponseModel.h */,
-				240F9B0D235D3ECD00FFF67B /* WeatherResponseModel.m */,
 				240F9B0E235D3ECD00FFF67B /* SearchWeatherResponseModel.m */,
+				240F9B0B235D3ECD00FFF67B /* WeatherResponseModel.h */,
+				240F9B0D235D3ECD00FFF67B /* WeatherResponseModel.m */,
 			);
 			path = RootModel;
 			sourceTree = "<group>";

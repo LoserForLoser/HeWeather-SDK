@@ -10,9 +10,9 @@
 
 @implementation WeatherLifestyleModel
 
-+ (NSDictionary *)mj_objectClassInArray {
++ (NSDictionary *)modelContainerPropertyGenericClass {
     return @{
-             @"lifestyle" : @"Lifestyle"
+             @"lifestyle" : Lifestyle.class
              };
 }
 

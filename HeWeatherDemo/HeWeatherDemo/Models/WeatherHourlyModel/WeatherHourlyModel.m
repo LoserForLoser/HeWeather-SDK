@@ -10,9 +10,9 @@
 
 @implementation WeatherHourlyModel
 
-+ (NSDictionary *)mj_objectClassInArray {
++ (NSDictionary *)modelContainerPropertyGenericClass {
     return @{
-             @"hourly" : @"WeatherData"
+             @"hourly" : WeatherData.class
              };
 }
 

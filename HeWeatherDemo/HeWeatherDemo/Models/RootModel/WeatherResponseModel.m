@@ -7,18 +7,14 @@
 //
 
 #import "WeatherResponseModel.h"
-#import "MJExtension.h"
+#import "YYModel.h"
 
 @implementation WeatherResponseModel
 
-+ (NSDictionary *)mj_objectClassInArray {
++ (NSDictionary *)modelContainerPropertyGenericClass {
     return @{
-             @"HeWeather6" : @"WeatherResponseModel"
+             @"HeWeather6" : WeatherResponseModel.class
              };
-}
-
-+ (NSString *)mj_replacedKeyFromPropertyName121:(NSString *)propertyName {
-    return [propertyName mj_underlineFromCamel];
 }
 
 @end
