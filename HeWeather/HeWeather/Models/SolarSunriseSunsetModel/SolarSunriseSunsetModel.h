@@ -6,11 +6,11 @@
 //  Copyright © 2019 宋朝阳. All rights reserved.
 //
 
-#import "WetherResponseModel.h"
+#import "WeatherResponseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SolarSunriseSunsetModel : WetherResponseModel
+@interface SolarSunriseSunsetModel : WeatherResponseModel
 
 @property (nonatomic, strong) WeatherData *sunrise_sunset;
 

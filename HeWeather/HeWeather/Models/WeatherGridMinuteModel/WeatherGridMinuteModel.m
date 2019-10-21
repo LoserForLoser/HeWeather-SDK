@@ -10,9 +10,9 @@
 
 @implementation WeatherGridMinuteModel
 
-+ (NSDictionary *)mj_objectClassInArray {
++ (NSDictionary *)modelContainerPropertyGenericClass {
     return @{
-             @"pcpn_5m" : @"Pcpn5m"
+             @"pcpn_5m" : Pcpn5m.class
              };
 }
 

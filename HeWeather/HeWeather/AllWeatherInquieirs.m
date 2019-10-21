@@ -11,7 +11,7 @@
 #import "AllWeatherInquieirs+Request.h"
 #import "AllWeatherInquieirs+Tool.h"
 #import "WeatherNowModel.h"
-#import <MJExtension/MJExtension.h>
+#import <YYModel/YYModel.h>
 
 NSString * const kAppAPIURL = @"https://api.heweather.com/s6/";
 NSString * const kAppFreeAPIURL = @"https://free-api.heweather.com/s6/";
@@ -214,7 +214,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
         switch (inquireType) {
             case INQUIRE_TYPE_WEATHER_FORECAST:{
                 [self weatherForecastWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    WeatherForecastModel *weatherForecastModel = [WeatherForecastModel mj_objectWithKeyValues:responseObject];
+                    WeatherForecastModel *weatherForecastModel = [WeatherForecastModel yy_modelWithJSON:responseObject];
                     WeatherForecastModel *weatherForecastModelResponse = (WeatherForecastModel *)weatherForecastModel.HeWeather6.firstObject;
                     if (response) {
                         response(weatherForecastModelResponse, error);
@@ -224,7 +224,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_NOW:{
                 [self weatherNowWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    WeatherNowModel *weatherNowModel = [WeatherNowModel mj_objectWithKeyValues:responseObject];
+                    WeatherNowModel *weatherNowModel = [WeatherNowModel yy_modelWithJSON:responseObject];
                     WeatherNowModel *weatherNowModelResponse = (WeatherNowModel *)weatherNowModel.HeWeather6.firstObject;
                     if (response) {
                         response(weatherNowModelResponse, error);
@@ -234,7 +234,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_HOURLY:{
                 [self weatherHourlyWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    WeatherHourlyModel *weatherHourlyModel = [WeatherHourlyModel mj_objectWithKeyValues:responseObject];
+                    WeatherHourlyModel *weatherHourlyModel = [WeatherHourlyModel yy_modelWithJSON:responseObject];
                     WeatherHourlyModel *weatherHourlyModelResponse = (WeatherHourlyModel *)weatherHourlyModel.HeWeather6.firstObject;
                     if (response) {
                         response(weatherHourlyModelResponse, error);
@@ -244,7 +244,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER_LIFESTYLE:{
                 [self weatherLifestyleWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    WeatherLifestyleModel *weatherLifestyleModel = [WeatherLifestyleModel mj_objectWithKeyValues:responseObject];
+                    WeatherLifestyleModel *weatherLifestyleModel = [WeatherLifestyleModel yy_modelWithJSON:responseObject];
                     WeatherLifestyleModel *weatherLifestyleModelResponse = (WeatherLifestyleModel *)weatherLifestyleModel.HeWeather6.firstObject;
                     if (response) {
                         response(weatherLifestyleModelResponse, error);
@@ -254,7 +254,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_WEATHER:{
                 [self weatherWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    WeatherModel *weatherModel = [WeatherModel mj_objectWithKeyValues:responseObject];
+                    WeatherModel *weatherModel = [WeatherModel yy_modelWithJSON:responseObject];
                     WeatherModel *weatherModelResponse = (WeatherModel *)weatherModel.HeWeather6.firstObject;
                     if (response) {
                         response(weatherModelResponse, error);
@@ -269,7 +269,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherGridMinuteWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        WeatherGridMinuteModel *weatherGridMinuteModel = [WeatherGridMinuteModel mj_objectWithKeyValues:responseObject];
+                        WeatherGridMinuteModel *weatherGridMinuteModel = [WeatherGridMinuteModel yy_modelWithJSON:responseObject];
                         WeatherGridMinuteModel *weatherGridMinuteModelResponse = (WeatherGridMinuteModel *)weatherGridMinuteModel.HeWeather6.firstObject;
                         if (response) {
                             response(weatherGridMinuteModelResponse, error);
@@ -285,7 +285,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherGridNowWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        WeatherGridNowModel *weatherGridNowModel = [WeatherGridNowModel mj_objectWithKeyValues:responseObject];
+                        WeatherGridNowModel *weatherGridNowModel = [WeatherGridNowModel yy_modelWithJSON:responseObject];
                         WeatherGridNowModel *weatherGridNowModelResponse = (WeatherGridNowModel *)weatherGridNowModel.HeWeather6.firstObject;
                         if (response) {
                             response(weatherGridNowModelResponse, error);
@@ -301,7 +301,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherGridForecastWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        WeatherGridForecastModel *weatherGridForecastModel = [WeatherGridForecastModel mj_objectWithKeyValues:responseObject];
+                        WeatherGridForecastModel *weatherGridForecastModel = [WeatherGridForecastModel yy_modelWithJSON:responseObject];
                         WeatherGridForecastModel *weatherGridForecastModelResponse = (WeatherGridForecastModel *)weatherGridForecastModel.HeWeather6.firstObject;
                         if (response) {
                             response(weatherGridForecastModelResponse, error);
@@ -317,7 +317,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherGridHourlyWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        WeatherGridHourlyModel *weatherGridHourlyModel = [WeatherGridHourlyModel mj_objectWithKeyValues:responseObject];
+                        WeatherGridHourlyModel *weatherGridHourlyModel = [WeatherGridHourlyModel yy_modelWithJSON:responseObject];
                         WeatherGridHourlyModel *weatherGridHourlyModelResponse = (WeatherGridHourlyModel *)weatherGridHourlyModel.HeWeather6.firstObject;
                         if (response) {
                             response(weatherGridHourlyModelResponse, error);
@@ -333,7 +333,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self alarmWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        AlarmModel *alarmModel = [AlarmModel mj_objectWithKeyValues:responseObject];
+                        AlarmModel *alarmModel = [AlarmModel yy_modelWithJSON:responseObject];
                         AlarmModel *alarmModelResponse = (AlarmModel *)alarmModel.HeWeather6.firstObject;
                         if (response) {
                             response(alarmModelResponse, error);
@@ -349,7 +349,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self alarmAllWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        AlarmAllModel *alarmAllModel = [AlarmAllModel mj_objectWithKeyValues:responseObject];
+                        AlarmAllModel *alarmAllModel = [AlarmAllModel yy_modelWithJSON:responseObject];
                         AlarmAllModel *alarmAllModelResponse = (AlarmAllModel *)alarmAllModel.HeWeather6.firstObject;
                         if (response) {
                             response(alarmAllModelResponse, error);
@@ -365,7 +365,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self scenicWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        ScenicModel *scenicModel = [ScenicModel mj_objectWithKeyValues:responseObject];
+                        ScenicModel *scenicModel = [ScenicModel yy_modelWithJSON:responseObject];
                         ScenicModel *scenicModelResponse = (ScenicModel *)scenicModel.HeWeather6.firstObject;
                         if (response) {
                             response(scenicModelResponse, error);
@@ -376,7 +376,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_AIR_NOW:{
                 [self airNowWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    AirNowModel *airNowModel = [AirNowModel mj_objectWithKeyValues:responseObject];
+                    AirNowModel *airNowModel = [AirNowModel yy_modelWithJSON:responseObject];
                     AirNowModel *airNowModelResponse = (AirNowModel *)airNowModel.HeWeather6.firstObject;
                     if (response) {
                         response(airNowModelResponse, error);
@@ -391,7 +391,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self airForecastWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        AirForecastModel *airForecastModel = [AirForecastModel mj_objectWithKeyValues:responseObject];
+                        AirForecastModel *airForecastModel = [AirForecastModel yy_modelWithJSON:responseObject];
                         AirForecastModel *airForecastModelResponse = (AirForecastModel *)airForecastModel.HeWeather6.firstObject;
                         if (response) {
                             response(airForecastModelResponse, error);
@@ -407,7 +407,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self airHourlyWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        AirHourlyModel *airHourlyModel = [AirHourlyModel mj_objectWithKeyValues:responseObject];
+                        AirHourlyModel *airHourlyModel = [AirHourlyModel yy_modelWithJSON:responseObject];
                         AirHourlyModel *airHourlyModelResponse = (AirHourlyModel *)airHourlyModel.HeWeather6.firstObject;
                         if (response) {
                             response(airHourlyModelResponse, error);
@@ -423,7 +423,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self airWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        AirModel *airModel = [AirModel mj_objectWithKeyValues:responseObject];
+                        AirModel *airModel = [AirModel yy_modelWithJSON:responseObject];
                         AirModel *airModelResponse = (AirModel *)airModel.HeWeather6.firstObject;
                         if (response) {
                             response(airModelResponse, error);
@@ -439,7 +439,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self weatherHistoricalWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        WeatherHistoricalModel *weatherHistoricalModel = [WeatherHistoricalModel mj_objectWithKeyValues:responseObject];
+                        WeatherHistoricalModel *weatherHistoricalModel = [WeatherHistoricalModel yy_modelWithJSON:responseObject];
                         WeatherHistoricalModel *weatherHistoricalModelResponse = (WeatherHistoricalModel *)weatherHistoricalModel.HeWeather6.firstObject;
                         if (response) {
                             response(weatherHistoricalModelResponse, error);
@@ -450,7 +450,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_SOLAR_SUNRISE_SUNSET:{
                 [self solarSunriseSunsetWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    SolarSunriseSunsetModel *solarSunriseSunsetModel = [SolarSunriseSunsetModel mj_objectWithKeyValues:responseObject];
+                    SolarSunriseSunsetModel *solarSunriseSunsetModel = [SolarSunriseSunsetModel yy_modelWithJSON:responseObject];
                     SolarSunriseSunsetModel *solarSunriseSunsetModelResponse = (SolarSunriseSunsetModel *)solarSunriseSunsetModel.HeWeather6.firstObject;
                     if (response) {
                         response(solarSunriseSunsetModelResponse, error);
@@ -479,7 +479,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                     }
                 } else {
                     [self solarElevationAngleWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                        SolarElevationAngleModel *solarElevationAngleModel = [SolarElevationAngleModel mj_objectWithKeyValues:responseObject];
+                        SolarElevationAngleModel *solarElevationAngleModel = [SolarElevationAngleModel yy_modelWithJSON:responseObject];
                         SolarElevationAngleModel *solarElevationAngleModelResponse = (SolarElevationAngleModel *)solarElevationAngleModel.HeWeather6.firstObject;
                         if (response) {
                             response(solarElevationAngleModelResponse, error);
@@ -490,7 +490,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_SEARCH:{
                 [self searchWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    SearchModel *searchModel = [SearchModel mj_objectWithKeyValues:responseObject];
+                    SearchModel *searchModel = [SearchModel yy_modelWithJSON:responseObject];
                     SearchModel *searchModelResponse = (SearchModel *)searchModel.HeWeather6.firstObject;
                     if (response) {
                         response(searchModelResponse, error);
@@ -500,7 +500,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_FIND:{
                 [self findWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    FindModel *findModel = [FindModel mj_objectWithKeyValues:responseObject];
+                    FindModel *findModel = [FindModel yy_modelWithJSON:responseObject];
                     FindModel *findModelResponse = (FindModel *)findModel.HeWeather6.firstObject;
                     if (response) {
                         response(findModelResponse, error);
@@ -510,7 +510,7 @@ static AllWeatherInquieirs *_allWeatherInquieirs;
                 break;
             case INQUIRE_TYPE_TOP:{
                 [self topWithResponse:^(id  _Nullable responseObject, NSError * _Nullable error) {
-                    TopModel *topModel = [TopModel mj_objectWithKeyValues:responseObject];
+                    TopModel *topModel = [TopModel yy_modelWithJSON:responseObject];
                     TopModel *topModelResponse = (TopModel *)topModel.HeWeather6.firstObject;
                     if (response) {
                         response(topModelResponse, error);

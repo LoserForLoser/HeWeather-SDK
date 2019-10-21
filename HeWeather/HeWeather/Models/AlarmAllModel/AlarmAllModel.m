@@ -10,9 +10,9 @@
 
 @implementation AlarmAllModel
 
-+ (NSDictionary *)mj_objectClassInArray {
++ (NSDictionary *)modelContainerPropertyGenericClass {
     return @{
-             @"alarm_list" : @"AlarmMessage"
+             @"alarm_list" : AlarmMessage.class
              };
 }
 

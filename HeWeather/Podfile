@@ -8,6 +8,6 @@ target 'HeWeather' do
   # Pods for HeWeather
 
 pod 'AFNetworking'
-pod 'MJExtension'
+pod 'YYModel'
 
 end

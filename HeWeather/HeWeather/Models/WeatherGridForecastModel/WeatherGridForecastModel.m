@@ -10,9 +10,9 @@
 
 @implementation WeatherGridForecastModel
 
-+ (NSDictionary *)mj_objectClassInArray {
++ (NSDictionary *)modelContainerPropertyGenericClass {
     return @{
-             @"grid_forecast" : @"WeatherData"
+             @"grid_forecast" : WeatherData.class
              };
 }
 
