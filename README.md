@@ -3,7 +3,9 @@
 
 Pod 支持正在开发中……
 
- * 当前版本 2019-07-01 2.0.4 使用MJExtension做Model竟然忘做Array等数据类型处理了！加上（刚才登上许久未上的和风天气官网发现API开始大改了，统一了许多数据，老接口陆续废掉了，ε-(´∀｀; )，跟着他改版的事等这次项目忙完再说吧）
+ * 当前版本 2019-10-21 2.1.0 更迭使用 YYModel 作为 Model 框架
+
+ * ~~当前版本 2019-07-01 2.0.4 使用MJExtension做Model竟然忘做Array等数据类型处理了！加上（刚才登上许久未上的和风天气官网发现API开始大改了，统一了许多数据，老接口陆续废掉了，ε-(´∀｀; )，跟着他改版的事等这次项目忙完再说吧）~~
 
  * ~~当前版本 2019-06-05 2.0.3 调整网络请求方法，降低代码复杂度~~
 
@@ -21,7 +23,7 @@ Pod 支持正在开发中……
 
    使用时请确保你的项目中有 AFN
 
-   （我网络请求不好，这能求助于第三方了，~~另外model也是软件生成的，所以整个项目会炒鸡大，如有高人请赐教~~ Model 框架本来想用JSONModel的，但是看了一篇文章《[关于JSONModel和MJExtension的性能对比](https://www.jianshu.com/p/6d59872cf499)》后决定改为 MJExtension《[OC_YYModel和MJExtension的效率对比](https://www.jianshu.com/p/ef3baf1c9463)》后决定改为 MJExtension，有兴趣的朋友可以看看）
+   （我网络请求不好，这能求助于第三方了，~~另外model也是软件生成的，所以整个项目会炒鸡大，如有高人请赐教~~ Model 框架本来想用JSONModel的，但是看了一篇文章《[关于JSONModel和MJExtension的性能对比](https://www.jianshu.com/p/6d59872cf499)》和《[OC_YYModel和MJExtension的效率对比](https://www.jianshu.com/p/ef3baf1c9463)》~~后决定改为 MJExtension~~ 两篇文章后决定改为 YYModel，有兴趣的朋友可以看看，当然 YYModel 的 git 上的 md 文档也有直观的柱状图说明）
 
  * 使用时请仔细阅读附带相关文档
 
@@ -35,4 +37,4 @@ Pod 支持正在开发中……
 
    Target ->Build Phases -> Link Binary With Libraries 找到 HEWEATHER.framework，将其默认 "Required" 状态更改为 "Optional" 即可
 
-#### 声明：本工程 key username 为本人开发及工程 Demo 所用，开发者需自行申请相关 key username ，严禁使用本 Demo 中的 key username 用于你自己项目，否则若被官方发现，后续使用出现各类问题需自行承担全部责任，本人概不负责！
+#### 声明：本工程 key username 为本人开发及工程 Demo 所用，开发者需自行申请相关 key username ，严禁使用本 Demo 中的 key username 用于你自己项目，否则若被官方发现，后续使用出现各类问题需自行承担全部责任，本人概不负责╮(╯▽╰)╭
