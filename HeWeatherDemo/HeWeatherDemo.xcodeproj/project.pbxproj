@@ -335,8 +335,8 @@
 		240F9AFB235D3ECC00FFF67B /* AirForecastModel */ = {
 			isa = PBXGroup;
 			children = (
-				240F9AFC235D3ECC00FFF67B /* AirForecastModel.m */,
 				240F9AFD235D3ECC00FFF67B /* AirForecastModel.h */,
+				240F9AFC235D3ECC00FFF67B /* AirForecastModel.m */,
 			);
 			path = AirForecastModel;
 			sourceTree = "<group>";

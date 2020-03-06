@@ -24,8 +24,8 @@
     self.rootCV = [[ViewController alloc] init];
     self.window.rootViewController = self.rootCV;
     
-    HeConfigInstance.kHeAppUsername = @"HE1905291542071163";
-    HeConfigInstance.kHeAppKey = @"3a34142a39aa46c2811d160a0fc43432";
+    HeConfigInstance.kHeAppUsername = @"HE2003051612061911";
+    HeConfigInstance.kHeAppKey = @"84520c2189964cd69ebac9209eeb92d5";
     
     return YES;
 }
